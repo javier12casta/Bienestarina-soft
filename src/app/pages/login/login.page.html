@@ -1,11 +1,13 @@
-<ion-content class="mybackground">
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding-top">
   <form #form="ngForm" (ngSubmit)="login(form)">
     <ion-grid>
       <ion-row color="primary" justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-          <div text-center>
-            <h3>Iniciar Sesión</h3>
-          </div>
           <div padding>
             <ion-item>
               <ion-input name="usuario" type="text" placeholder="usuario" ngModel required></ion-input>

@@ -1,9 +1,16 @@
 ion-content {
     --background: linear-gradient(135deg, var(--ion-color-success), var(--ion-color-primary));
+   // --background: url("../../../assets/login.svg");
+    //--background-size:'auto';
+    
 }
-h3{
+ion-toolbar{
+    --background: linear-gradient(100deg, var(--ion-color-success), var(--ion-color-primary));
+}
+ion-title{
     font-family: 'Crimson Text', serif;
     font-size: 50px;
+    text-align: center;
 }
 ion-button{
     --background: #38da10;
