@@ -1,0 +1,20 @@
+ion-content {
+    --background: linear-gradient(135deg, var(--ion-color-success), var(--ion-color-primary));
+}
+h3{
+    font-family: 'Crimson Text', serif;
+    font-size: 50px;
+}
+ion-button{
+    --background: #38da10;
+}
+
+ion-icon {
+    width: 40px;
+    height: 40px;
+    color: #38da10;
+}
+
+a{
+    color: azure;
+}
