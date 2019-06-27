@@ -11,18 +11,20 @@ const routes: Routes = [
   {
     path: 'menu',
     component: MenuPage,
-    children:[
-
-      { path: 'entrega', loadChildren: '../entrega/entrega.module#EntregaPageModule' },
-      { path: 'inventario', loadChildren: '../inventario/inventario.module#InventarioPageModule' }
-
+    children: [
+      {
+        path: 'entrega',
+        loadChildren: '../entrega/entrega.module#EntregaPageModule'
+      },
+      {
+        path: 'inventario',
+        loadChildren: '../inventario/inventario.module#InventarioPageModule'
+      },
     ]
   },
   {
-
     path:'',
-    redirectTo:'/menu/entrega'
-
+    redirectTo: '/menu/entrega'
   }
 ];
 
@@ -35,4 +37,4 @@ const routes: Routes = [
   ],
   declarations: [MenuPage]
 })
-export class MenuPageModule {}
+export class MenuPageModule { }
