@@ -12,11 +12,12 @@ export class MenuPage implements OnInit {
     {
       title: 'Inventario',
       url: '/menu/inventario',
-      
+      name:'cube'
     },
     {
       title: 'Entrega',
-      url: '/menu/entrega'
+      url: '/menu/entrega',
+      name:'clipboard'
     }
   ];
 
