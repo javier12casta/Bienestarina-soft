@@ -18,8 +18,12 @@ ion-title{
     font-size: 50px;
     text-align: center;
 }
+ion-item{
+    margin-top: 3%;
+}
 ion-button{
     --background: #38da10;
+    margin-top: 5%;
 }
 
 ion-icon {
@@ -30,4 +34,12 @@ ion-icon {
 
 a{
     color: azure;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    display:block;
+    margin:auto;
+    margin-bottom: 10%;
 }

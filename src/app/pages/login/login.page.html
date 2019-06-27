@@ -7,8 +7,8 @@
   <form [formGroup]="loginForm">
     <ion-grid>
       <ion-row justify-content-center>
-        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12" container>
+            <img src="assets/profile.svg" />
           <ion-item>
             <ion-label>Ususario</ion-label>
             <ion-input formControlName="usuario" type="text" placeholder="Ususario"></ion-input>
@@ -38,6 +38,13 @@
 
 
         </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+        <div text-center>
+          Si no tienes una cuenta, por favor <a routerLink='/register'>
+            registrate</a> primero!
+        </div>
       </ion-row>
     </ion-grid>
 
