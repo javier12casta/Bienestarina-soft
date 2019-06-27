@@ -4,30 +4,34 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding-top">
-  <form #form="ngForm" (ngSubmit)="login(form)">
+  <form [formGroup]="loginForm">
     <ion-grid>
-      <ion-row color="primary" justify-content-center>
+      <ion-row justify-content-center>
         <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-          <div padding>
-            <ion-item>
-              <ion-input name="usuario" type="text" placeholder="usuario" ngModel required></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-input name="contraseña" type="password" placeholder="contraseña" ngModel required></ion-input>
-            </ion-item>
+
+          <ion-item>
+            <ion-label>Ususario</ion-label>
+            <ion-input formControlName="usuario" type="text" placeholder="Ususario"></ion-input>
+          </ion-item>
+          <div class="error_messages">
+            <ng-container *ngFor="let error of error_messages.usuario">
+              <div class="error_messages"
+                *ngIf="loginForm.get('usuario').hasError(error.type) && (loginForm.get('usuario').dirty || loginForm.get('usuario').touched)">
+                {{error.message}}
+              </div>
+            </ng-container>
           </div>
-          <div padding>
-            <ion-button size="medium" shape="round" type="submit" [disabled]="form.invalid" expand="block">Login
-            </ion-button>
-          </div>
+          <ion-item>
+            <ion-label>Contraseña</ion-label>
+            <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
+          </ion-item>
+          <ion-button shape="round" size="default" color="success" expand="block" (click)="onClick()"
+            [disabled]="!loginForm.valid">Iniciar Sesión</ion-button>
+
+
         </ion-col>
       </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <div text-center>
-          Si no tienes una cuenta, por favor <a routerLink='/register'>
-            registrate</a> primero!
-        </div>
-      </ion-row>
     </ion-grid>
+
   </form>
 </ion-content>

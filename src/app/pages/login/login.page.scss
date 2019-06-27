@@ -4,6 +4,12 @@ ion-content {
     //--background-size:'auto';
     
 }
+.error-messages{
+    font-size: 0.7em;
+    color: red;
+    text-align: center;
+}
+
 ion-toolbar{
     --background: linear-gradient(100deg, var(--ion-color-success), var(--ion-color-primary));
 }
