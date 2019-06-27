@@ -13,9 +13,9 @@
             <ion-label>Ususario</ion-label>
             <ion-input formControlName="usuario" type="text" placeholder="Ususario"></ion-input>
           </ion-item>
-          <div class="error_messages">
+          <div class="error-messages">
             <ng-container *ngFor="let error of error_messages.usuario">
-              <div class="error_messages"
+              <div class="error-messages"
                 *ngIf="loginForm.get('usuario').hasError(error.type) && (loginForm.get('usuario').dirty || loginForm.get('usuario').touched)">
                 {{error.message}}
               </div>
@@ -25,7 +25,15 @@
             <ion-label>Contraseña</ion-label>
             <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
           </ion-item>
-          <ion-button shape="round" size="default" color="success" expand="block" (click)="onClick()"
+          <div class="error-messages">
+            <ng-container *ngFor="let error of error_messages.password">
+              <div class="error-messages"
+                *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                {{error.message}}
+              </div>
+            </ng-container>
+          </div>
+          <ion-button shape="round" size="default" color="success" expand="block" (click)="login()"
             [disabled]="!loginForm.valid">Iniciar Sesión</ion-button>
 
 

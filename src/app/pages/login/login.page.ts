@@ -17,12 +17,12 @@ export class LoginPage implements OnInit {
       {type: 'maxlength', message:'Debe contener menos de 30 caracteres.'},
       {type: 'pattern', message: 'La contraseña debe contener numeros, mayusculas o minusculas'}
     ],
-    'Usuario': [
+    'usuario': [
       {type: 'reqired', message: 'Se requiere nombre de usuario' },
       {type: 'minlength', message:'Debe contener al menos 8 caracteres.'},
       {type: 'maxlength', message:'Debe contener menos de 20 caracteres.'},
       {type: 'pattern', message: 'El nombre de usuario debe contener numeros, mayusculas o minusculas'}
-    ]
+    ],
   }
 
   constructor(private formBuilder: FormBuilder) 
@@ -44,7 +44,10 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
-
   }
 
+  login(){
+    console.log('usuario :', this.loginForm.value.usuario);
+    console.log('password :', this.loginForm.value.password);
+  }
 }
