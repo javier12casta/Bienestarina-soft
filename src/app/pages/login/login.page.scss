@@ -1,8 +1,5 @@
 ion-content {
-    --background: linear-gradient(135deg, var(--ion-color-success), var(--ion-color-primary));
-   // --background: url("../../../assets/login.svg");
-    //--background-size:'auto';
-    
+    --background: Snow;
 }
 .error-messages{
     font-size: 0.9em;
@@ -11,12 +8,13 @@ ion-content {
 }
 
 ion-toolbar{
-    --background: linear-gradient(100deg, var(--ion-color-success), var(--ion-color-primary));
+    --background: DeepSkyBlue;
 }
 ion-title{
     font-family: 'Crimson Text', serif;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
+    color: snow;
 }
 ion-item{
     margin-top: 3%;
@@ -33,7 +31,7 @@ ion-icon {
 }
 
 a{
-    color: azure;
+    color: RoyalBlue;
 }
 
 img{
@@ -42,4 +40,9 @@ img{
     display:block;
     margin:auto;
     margin-bottom: 10%;
+}
+.panel{
+    padding: 15px;
+    border: 15px;
+    color: black;
 }
