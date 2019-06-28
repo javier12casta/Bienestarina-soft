@@ -10,10 +10,14 @@
 <ion-content class="ion-padding-top" >
   <div class="panel">
     <ion-label>Punto de entrega</ion-label>
-    <ion-checkbox >Primario</ion-checkbox>
-    <ion-checkbox>UDS</ion-checkbox>
+    <li></li>
+    <ion-label>Primario</ion-label>
+    <ion-checkbox ></ion-checkbox>
+    <ion-label>UDS</ion-label>
+    <ion-checkbox></ion-checkbox>
+    <li></li>
     <ion-label>Codigo Del Punto de entrega o UDS</ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="text" name="codigo" ></ion-input>
     <ion-label>Nombre Punto de entrega o UDS</ion-label>
     <ion-input type="text"></ion-input>
     <ion-label>Responsable Punto de entrega o UDS</ion-label>
@@ -36,6 +40,7 @@
     <ion-input type="text"></ion-input>
 
     <ion-label>Datos del Beneficiario</ion-label>
+    <li></li>
     <ion-label>Primer Nombre</ion-label>
     <ion-input type="text"></ion-input>
     <ion-label>Segundo Nombre</ion-label>
@@ -44,9 +49,8 @@
     <ion-input type="text"></ion-input>
     <ion-label>Segundo Apellido</ion-label>
     <ion-input type="text"></ion-input>
+    <li></li>
     
-    <ion-item>
-        <ion-list>
           <ion-item>
             <ion-label>Tipo de documento</ion-label>
             <ion-select placeholder="Seleccione uno">
@@ -57,8 +61,7 @@
               <ion-select-option value="2">RC</ion-select-option>
             </ion-select>
           </ion-item>
-        </ion-list>
-      </ion-item>
+        
 
       <ion-label>Numero de documento de identidad</ion-label>
       <ion-input type="text"></ion-input>
@@ -66,35 +69,41 @@
       <!--Date picker-->
       <ion-item>
           <ion-label>Fecha Entrega</ion-label>
+          <li></li>
           <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
         </ion-item>
         <!---->
 
         <ion-label>Bienestarina Max</ion-label>
+        <li></li>
         <ion-label>Numero Lote</ion-label>
         <ion-input type="text"></ion-input>
         <ion-label>Unidades</ion-label>
         <ion-input type="text"></ion-input>
 
         <ion-label>Bienestarina Liquida</ion-label>
+        <li></li>
         <ion-label>Numero Lote</ion-label>
         <ion-input type="text"></ion-input>
         <ion-label>Unidades</ion-label>
         <ion-input type="text"></ion-input>
 
         <ion-label>Alimento MG y Ml</ion-label>
+        <li></li>
         <ion-label>Numero Lote</ion-label>
         <ion-input type="text"></ion-input>
         <ion-label>Unidades</ion-label>
         <ion-input type="text"></ion-input>
 
         <ion-label>Otro AAVN</ion-label>
+        <li></li>
         <ion-label>Numero Lote</ion-label>
         <ion-input type="text"></ion-input>
         <ion-label>Unidades</ion-label>
         <ion-input type="text"></ion-input>
 
         <ion-label>Quien Recibe</ion-label>
+        <li></li>
         <ion-label>Nombre Completo</ion-label>
         <ion-input type="text"></ion-input>
         <ion-label>Parentesco</ion-label>
@@ -102,7 +111,16 @@
         <ion-label>Firma</ion-label>
         <ion-input type="text"></ion-input>
 
-        <ion-button color="success" expand="block">Entregar</ion-button>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of error_messages.password">
+            <div class="error-messages"
+              *ngIf="loginForm.get('codigo').hasError(error.type) && (loginForm.get('codigo').dirty || loginForm.get('codigo').touched)">
+              {{error.message}}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-button shape="round" size="default" color="success" expand="block" (click)="entregar()" [disabled]="!loginForm.valid">Entregar</ion-button>
       </div>
 
 </ion-content>
