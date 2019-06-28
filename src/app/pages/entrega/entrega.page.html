@@ -7,8 +7,102 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="ion-padding-top" >
+  <div class="panel">
+    <ion-label>Punto de entrega</ion-label>
+    <ion-checkbox >Primario</ion-checkbox>
+    <ion-checkbox>UDS</ion-checkbox>
+    <ion-label>Codigo Del Punto de entrega o UDS</ion-label>
+    <ion-input type="text" ></ion-input>
+    <ion-label>Nombre Punto de entrega o UDS</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Responsable Punto de entrega o UDS</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Direccion Punto de entrega o UDS</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Codigo Punto de entrega o UDS</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Mes Consumo</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>año</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Suplente Punto de entrega</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Barrio</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Telefono</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Nombre Punto de entrega de origen</ion-label>
+    <ion-input type="text"></ion-input>
 
+    <ion-label>Datos del Beneficiario</ion-label>
+    <ion-label>Primer Nombre</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Segundo Nombre</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Primer Apellido</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Segundo Apellido</ion-label>
+    <ion-input type="text"></ion-input>
+    
+    <ion-item>
+        <ion-list>
+          <ion-item>
+            <ion-label>Tipo de documento</ion-label>
+            <ion-select placeholder="Seleccione uno">
+              <ion-select-option value="1">CC</ion-select-option>
+              <ion-select-option value="2">CE</ion-select-option>
+              <ion-select-option value="2">CI</ion-select-option>
+              <ion-select-option value="2">TI</ion-select-option>
+              <ion-select-option value="2">RC</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-item>
 
-  
+      <ion-label>Numero de documento de identidad</ion-label>
+      <ion-input type="text"></ion-input>
+
+      <!--Date picker-->
+      <ion-item>
+          <ion-label>Fecha Entrega</ion-label>
+          <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
+        </ion-item>
+        <!---->
+
+        <ion-label>Bienestarina Max</ion-label>
+        <ion-label>Numero Lote</ion-label>
+        <ion-input type="text"></ion-input>
+        <ion-label>Unidades</ion-label>
+        <ion-input type="text"></ion-input>
+
+        <ion-label>Bienestarina Liquida</ion-label>
+        <ion-label>Numero Lote</ion-label>
+        <ion-input type="text"></ion-input>
+        <ion-label>Unidades</ion-label>
+        <ion-input type="text"></ion-input>
+
+        <ion-label>Alimento MG y Ml</ion-label>
+        <ion-label>Numero Lote</ion-label>
+        <ion-input type="text"></ion-input>
+        <ion-label>Unidades</ion-label>
+        <ion-input type="text"></ion-input>
+
+        <ion-label>Otro AAVN</ion-label>
+        <ion-label>Numero Lote</ion-label>
+        <ion-input type="text"></ion-input>
+        <ion-label>Unidades</ion-label>
+        <ion-input type="text"></ion-input>
+
+        <ion-label>Quien Recibe</ion-label>
+        <ion-label>Nombre Completo</ion-label>
+        <ion-input type="text"></ion-input>
+        <ion-label>Parentesco</ion-label>
+        <ion-input type="text"></ion-input>
+        <ion-label>Firma</ion-label>
+        <ion-input type="text"></ion-input>
+
+        <ion-button color="success" expand="block">Entregar</ion-button>
+      </div>
+
 </ion-content>
