@@ -1,0 +1,29 @@
+ion-content {
+    --background: Snow;
+}
+.error-messages{
+    font-size: 0.9em;
+    color: red;
+    text-align: center;
+}
+
+ion-toolbar{
+    --background: DeepSkyBlue;
+}
+ion-input{
+    --background: rgb(184, 213, 223);
+}
+
+ion-title{
+    font-family: 'Crimson Text', serif;
+    font-size: 30px;
+    text-align: center;
+    color: snow;
+}
+ion-item{
+    margin-top: 3%;
+}
+ion-button{
+    --background: #38da10;
+    margin-top: 5%;
+}
