@@ -20,6 +20,10 @@ const routes: Routes = [
         path: 'inventario',
         loadChildren: '../inventario/inventario.module#InventarioPageModule'
       },
+      { 
+        path: 'beneficiarios', 
+        loadChildren: '../beneficiarios/beneficiarios.module#BeneficiariosPageModule' 
+      },
     ]
   },
   {
