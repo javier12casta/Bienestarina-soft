@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ServicioService } from './servicio.service';
 
+import {AlertController} from '@ionic/angular';
+
 @NgModule({
 
 
@@ -28,6 +30,7 @@ import { ServicioService } from './servicio.service';
     providers: [ ServicioService,
     StatusBar,
     SplashScreen,
+
     HttpClientModule,
     { 
       provide: RouteReuseStrategy, 
@@ -35,9 +38,7 @@ import { ServicioService } from './servicio.service';
     }
   ],
   bootstrap: [
-    AppComponent
+    AppComponent,  
   ],
-   
- 
 })
 export class AppModule {}

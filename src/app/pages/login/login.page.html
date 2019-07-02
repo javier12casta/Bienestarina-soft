@@ -12,7 +12,7 @@
             <img src="assets/profile.svg" />
           <ion-item>
             <ion-label>Usuario</ion-label>
-            <ion-input formControlName="usuario" type="text" placeholder="Ususario"></ion-input>
+            <ion-input formControlName="usuario" type="text" placeholder="Ususario" [(ngModel)]="user.name"></ion-input>
           </ion-item>
           <div class="error-messages">
             <ng-container *ngFor="let error of error_messages.usuario">
@@ -24,7 +24,7 @@
           </div>
           <ion-item>
             <ion-label>Contraseña</ion-label>
-            <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
+            <ion-input formControlName="password" type="password" placeholder="Contraseña" [(ngModel)]="user.pw"></ion-input>
           </ion-item>
           <div class="error-messages">
             <ng-container *ngFor="let error of error_messages.password">
@@ -34,7 +34,7 @@
               </div>
             </ng-container>
           </div>
-          <ion-button shape="round" size="default" color="success" expand="block" (click)="login()"
+          <ion-button shape="round" size="default" color="success" expand="block" (click)="loginUser()"
             [disabled]="!loginForm.valid">Iniciar Sesión</ion-button>
 
 

@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+import {AlertController} from '@ionic/angular';
+import {AuthService}from '../../providers/auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -9,6 +13,11 @@ import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
 export class LoginPage implements OnInit {
 
   loginForm: FormGroup;
+
+  user = {
+    name:'admin123',
+    pw:'admin123'
+  };
 
   error_messages={
     'password': [
@@ -25,7 +34,7 @@ export class LoginPage implements OnInit {
     ],
   }
 
-  constructor(private formBuilder: FormBuilder) 
+  constructor(private formBuilder: FormBuilder, private router: Router,private service: AuthService, private alertCtrl: AlertController) 
   { 
     this.loginForm = this.formBuilder.group({
       password: new FormControl('', Validators.compose([
@@ -46,8 +55,22 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  login(){
-    console.log('usuario :', this.loginForm.value.usuario);
-    console.log('password :', this.loginForm.value.password);
+  loginUser(){
+    this.service.login(this.user.name, this.user.pw).then (success =>{
+      if (success) {
+        this.router.navigateByUrl('/menu');
+      }else{
+        this.presentAlert();
+      } 
+    });
+  }
+
+  async presentAlert () {
+    const alert = await this.alertCtrl.create({
+      header: 'Inicio de sesión fallido',
+      message: 'Verifica tus credenciales',
+      buttons: ['Listo']
+    });
+    await alert.present();
   }
 }
