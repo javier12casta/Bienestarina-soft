@@ -1,9 +1,40 @@
 <ion-header>
   <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons> 
     <ion-title>beneficiarios</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding-top">
+<div class="panel">
+    <ion-label>Primer Nombre</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Segundo Nombre</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>Primer Apellido</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>Segundo Apellido</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>Numero de Documento</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>Estado</ion-label>
+      <ion-input type="text"></ion-input>
 
-</ion-content>
+      <ion-item>
+          <ion-label>Fecha de ingreso </ion-label>
+          <li></li>
+          <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Fecha de Nacimiento</ion-label>
+            <li></li>
+            <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
+          </ion-item>
+
+          <ion-button size="default" color="success" expand="block">Enviar</ion-button>
+
+</div>
+</ion-content >
