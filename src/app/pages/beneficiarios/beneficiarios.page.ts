@@ -15,7 +15,7 @@ export class BeneficiariosPage implements OnInit {
     throw new Error("Method not implemented.");
   }
 
-  constructor(public navCtrl: NavController, private http:HttpClien) { 
+  constructor(public navCtrl: NavController, private http:HttpClient) { 
 
   
  // http.get("http://localhost/micrudtutoapp/src/api/productos.php?opcion=1").subscribe(snap => {
