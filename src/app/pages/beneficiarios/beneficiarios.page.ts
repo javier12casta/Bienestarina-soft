@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { HttpClient } from 'selenium-webdriver/http';
+import {HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-beneficiarios',
@@ -6,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./beneficiarios.page.scss'],
 })
 export class BeneficiariosPage implements OnInit {
+  listado;
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
   }
 
+  constructor(public navCtrl: NavController, private http:HttpClien) { 
+
+  
+ // http.get("http://localhost/micrudtutoapp/src/api/productos.php?opcion=1").subscribe(snap => {
+  // console.log(snap);
+  //  this.listado = snap;
+ //  });
+  }
 }
+
+

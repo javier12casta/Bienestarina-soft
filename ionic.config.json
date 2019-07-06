@@ -1,5 +1,7 @@
 {
   "name": "BienestaSoft",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
