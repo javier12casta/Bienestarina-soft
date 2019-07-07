@@ -9,7 +9,10 @@ const routes: Routes = [
   //{ path: 'entrega', loadChildren: './pages/entrega/entrega.module#EntregaPageModule' },
   //{ path: 'inventario', loadChildren: './pages/inventario/inventario.module#InventarioPageModule' },
   { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
-  { path: 'beneficiarios', loadChildren: './pages/beneficiarios/beneficiarios.module#BeneficiariosPageModule' },
+  //{ path: 'beneficiarios', loadChildren: './pages/beneficiarios/beneficiarios.module#BeneficiariosPageModule' },
+  //{ path: 'rol', loadChildren: './pages/rol/rol.module#RolPageModule' },
+  //{ path: 'acudientes', loadChildren: './pages/acudientes/acudientes.module#AcudientesPageModule' },
+  //{ path: 'usuarios', loadChildren: './pages/usuarios/usuarios.module#UsuariosPageModule' },
 ];
 
 @NgModule({

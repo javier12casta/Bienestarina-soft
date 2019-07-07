@@ -20,14 +20,26 @@ const routes: Routes = [
         path: 'inventario',
         loadChildren: '../inventario/inventario.module#InventarioPageModule'
       },
-      { 
-        path: 'beneficiarios', 
-        loadChildren: '../beneficiarios/beneficiarios.module#BeneficiariosPageModule' 
+      {
+        path: 'beneficiarios',
+        loadChildren: '../beneficiarios/beneficiarios.module#BeneficiariosPageModule'
+      },
+      {
+        path: 'rol',
+        loadChildren: '../rol/rol.module#RolPageModule'
+      },
+      {
+        path: 'acudientes',
+        loadChildren: '../acudientes/acudientes.module#AcudientesPageModule'
+      },
+      {
+        path: 'usuarios',
+        loadChildren: '../usuarios/usuarios.module#UsuariosPageModule'
       },
     ]
   },
   {
-    path:'',
+    path: '',
     redirectTo: '/menu/entrega'
   }
 ];

@@ -28,7 +28,10 @@ export class MenuPage implements OnInit {
       this.pages = [
         { title: 'Inventario', url: '/menu/inventario', name:'cube' },
         { title: 'Entrega', url: '/menu/entrega', name:'clipboard' },
-        {title: 'Beneficiarios', url: '/menu/beneficiarios', name:'contacts'}
+        {title: 'Beneficiarios', url: '/menu/beneficiarios', name:'contacts'},
+        {title: 'Acudientes', url: '/menu/acudientes', name:'contacts'},
+        {title: 'Rol', url: '/menu/rol', name:'contacts'},
+        {title: 'Usuarios', url: '/menu/usuarios', name:'contacts'},
       ];
     } else {
       this.pages = [
