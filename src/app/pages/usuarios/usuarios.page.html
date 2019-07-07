@@ -1,37 +1,24 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>usuarios</ion-title>
+  <ion-toolbar color="secondary">
+    <ion-title>Usuarios</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
   <div class="panel">
-    <ion-label>Primer Nombre</ion-label>
+    <ion-label>Nombre usuario</ion-label>
     <ion-input type="text"></ion-input>
-    <ion-label>Segundo Nombre</ion-label>
-      <ion-input type="text"></ion-input>
-      <ion-label>Primer Apellido</ion-label>
-      <ion-input type="text"></ion-input>
-      <ion-label>Segundo Apellido</ion-label>
-      <ion-input type="text"></ion-input>
-      <ion-label>Numero de Documento</ion-label>
-      <ion-input type="text"></ion-input>
-      <ion-label>Estado</ion-label>
-      <ion-input type="text"></ion-input>
+    <ion-label>Contraseña</ion-label>
+    <ion-input type="password"></ion-input>
+    <ion-item>
+      <ion-label>Rol</ion-label>
+      <ion-select placeholder="Seleciona una">
+        <ion-select-option value="adm">Administrador</ion-select-option>
+        <ion-select-option value="profe">Profesora</ion-select-option>
+        <ion-select-option value="comu">Comuna</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button size="default" color="success" expand="block">Enviar</ion-button>
 
-      <ion-item>
-          <ion-label>Fecha de ingreso </ion-label>
-          <li></li>
-          <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Fecha de Nacimiento</ion-label>
-            <li></li>
-            <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
-          </ion-item>
-
-          <ion-button size="default" color="success" expand="block">Enviar</ion-button>
-
-</div>
+  </div>
 </ion-content>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { HttpClient } from 'selenium-webdriver/http';
+//import { HttpClient } from 'selenium-webdriver/http';
 import {HttpClientModule} from '@angular/common/http';
 
 @Component({
@@ -15,7 +15,7 @@ export class BeneficiariosPage implements OnInit {
     throw new Error("Method not implemented.");
   }
 
-  constructor(public navCtrl: NavController, private http:HttpClient) { 
+  constructor(public navCtrl: NavController) { 
 
   
  // http.get("http://localhost/micrudtutoapp/src/api/productos.php?opcion=1").subscribe(snap => {
