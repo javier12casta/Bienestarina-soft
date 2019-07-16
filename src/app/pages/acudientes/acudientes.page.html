@@ -1,13 +1,11 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Beneficiarios</ion-title>
+      <ion-menu-button type="buttons" slot="start"></ion-menu-button>
+    <ion-title>Acudientes</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding-top">
+<ion-content class="ion-padding">
   <div class="panel">
     <ion-label>Primer Nombre</ion-label>
     <ion-input type="text"></ion-input>
@@ -38,6 +36,8 @@
 
     <ion-label>Numero de Documento</ion-label>
     <ion-input type="text"></ion-input>
+    <ion-label>Parentesco</ion-label>
+    <ion-input type="text"></ion-input>
     <ion-label>Estado</ion-label>
     <ion-input type="text"></ion-input>
 
@@ -61,7 +61,12 @@
       <ion-select-option value="MC">Modalidad Comunitaria</ion-select-option>
     </ion-select>
 
-
+    <ion-label>Correo</ion-label>
+    <ion-input type="email"></ion-input>
+    <ion-label>Telefono</ion-label>
+    <ion-input type="tel"></ion-input>
+    <ion-label>Telefono extra</ion-label>
+    <ion-input type="tel"></ion-input>
     <ion-button size="default" color="success" expand="block">Enviar</ion-button>
 
   </div>

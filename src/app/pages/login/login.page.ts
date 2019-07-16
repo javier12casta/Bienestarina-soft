@@ -58,7 +58,7 @@ export class LoginPage implements OnInit {
   loginUser(){
     this.service.login(this.user.name, this.user.pw).then (success =>{
       if (success) {
-        this.router.navigateByUrl('/menu');
+        this.router.navigateByUrl('/menu/entrega');
       }else{
         this.presentAlert();
       } 

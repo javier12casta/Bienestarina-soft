@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-menu-button type="buttons" slot="start"></ion-menu-button>
+    <ion-title>Usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="panel">
+    <ion-label>Nombre usuario</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Contraseña</ion-label>
+    <ion-input type="password"></ion-input>
+    <ion-item>
+      <ion-label>Rol</ion-label>
+      <ion-select placeholder="Seleciona una">
+        <ion-select-option value="adm">Administrador</ion-select-option>
+        <ion-select-option value="profe">Profesora</ion-select-option>
+        <ion-select-option value="comu">Comuna</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button size="default" color="success" expand="block">Enviar</ion-button>
+
+  </div>
+</ion-content>
