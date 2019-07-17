@@ -120,7 +120,7 @@
           </ng-container>
         </div>
 
-        <ion-button shape="round" size="default" color="success" expand="block" (click)="entregar()" [disabled]="!loginForm.valid">Entregar</ion-button>
+        <ion-button shape="round" size="default" color="success" expand="block" (click)="entregar()" [disabled]="!loginForm.valid" *ngFor="let usuario of usuarios">Entregar</ion-button>
       </div>
 
 </ion-content>

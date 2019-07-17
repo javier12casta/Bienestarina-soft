@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { resolve, reject } from 'q';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 export interface User {
   name:string;
@@ -10,7 +11,7 @@ export interface User {
 })
 export class AuthService {
   currentUser: User; 
-  constructor() { }
+  constructor(public http: HttpClient) { }
 
   login (name: string, pw: string) : Promise<boolean>{
     return new Promise((resolve, reject) =>{
@@ -43,6 +44,12 @@ export class AuthService {
 
   isAdmin(){
     return this.currentUser.rol == 1;
+  }
+
+
+  Obtenerdatos(){
+
+   return this.http.get('');
   }
 
 }
