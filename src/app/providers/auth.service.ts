@@ -4,27 +4,27 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 export interface User {
   name:string;
-  rol: number;
+  rol: Number;
 }
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   currentUser: User; 
-  constructor(public http: HttpClient) { }
+  constructor() { }
 
   login (name: string, pw: string) : Promise<boolean>{
     return new Promise((resolve, reject) =>{
       if(name === 'admin123' && pw ==='admin123'){
         this.currentUser = {
           name: name,
-          rol: 1
+          rol: 1,
         };
         resolve(true);
       } else if(name === 'user12345' && pw ==='user12345'){
         this.currentUser = {
           name: name,
-          rol: 2
+          rol: 2,
         };
         resolve(true);
       }else {
@@ -45,11 +45,4 @@ export class AuthService {
   isAdmin(){
     return this.currentUser.rol == 1;
   }
-
-
-  Obtenerdatos(){
-
-   return this.http.get('');
-  }
-
 }

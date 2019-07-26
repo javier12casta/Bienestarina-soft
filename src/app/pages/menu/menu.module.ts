@@ -54,21 +54,8 @@ const routes: Routes = [
 })
 export class MenuPageModule {
 
-  usuarios
-
 constructor(public navCtrl: NavController , public auth:AuthService){
 
 }
-
-ionViewDidLoad(){
-
-  this.auth.Obtenerdatos()
-  .subscribe(
-    (data)=>{this.usuarios = data;},
-    (error)=>{console.log(error);}
-    
-    )
-
-} 
 
  }
