@@ -4,7 +4,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 export interface User {
   name:string;
-  rol: Number;
+  rol: number;
 }
 @Injectable({
   providedIn: 'root'
