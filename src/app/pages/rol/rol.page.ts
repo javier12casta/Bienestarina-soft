@@ -8,22 +8,30 @@ import { ServicioService } from '../../servicio.service';
 })
 export class RolPage implements OnInit {
   usuarios: Object;
-  constructor( private Service: ServicioService) { }
+  constructor( private Service: ServicioService) {
+
+  }
 
   ionViewDidLoad(){
-    this.Service.Obtenerdatos()
-     .subscribe(
-      (data) => { this.usuarios = data; 
-        console.log(data);
-        console.log('funciona');
-      },
-      (error) =>{
-        console.log(error);
-      }
-    )
+    
   }
 
   ngOnInit() {
+  }
+
+  ionViewDidEnter(){
+
+    this.Service.Obtenerdatos()
+    .subscribe(
+     (data) => { this.usuarios = data; 
+       console.log(data);
+       console.log('funciona');
+     },
+     (error) =>{
+       console.log(error);
+     }
+   ) 
+
   }
 
 }
