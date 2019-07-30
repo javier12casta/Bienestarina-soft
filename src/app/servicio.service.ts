@@ -15,11 +15,15 @@ export class ServicioService {
    Obtenerdatos(){
      const path = `${this.api}/rol`; 
     return this.http.get<Rol[]>(path);
-    console.log('Datos');
    }
 
    insertarRol(rol: Rol){
     const path = `${this.api}/RolInsert`; 
      return this.http.post<Rol>(path, rol);
    }
+
+  Actualizar(rol: Rol){
+    const path = `${this.api}//RolUpdate/${rol.idRolPersona}`;
+    return this.http.put<Rol>(path, rol);
+  }
 }

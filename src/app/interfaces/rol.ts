@@ -2,5 +2,5 @@ export interface Rol {
 //se define la interfaz o estructura de datos de las tablas
     idRolPersona?: number;
     RolPersona:string;
-    Estado: Number;
+    Estado: number;
 }
