@@ -12,9 +12,7 @@ export class ServicioService {
     console.log("hello service");
    }
    Obtenerdatos(){
-    return this.http.get('http://localhost/rol:3306');
+    return this.http.get('http://localhost/rol');
     console.log('Datos');
    }
-
-   insertardatos
 }
