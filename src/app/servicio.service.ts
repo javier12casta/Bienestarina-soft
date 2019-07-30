@@ -12,7 +12,7 @@ export class ServicioService {
     console.log("hello service");
    }
    Obtenerdatos(){
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+    return this.http.get('http://localhost/rol:3306');
     console.log('Datos');
    }
 }
