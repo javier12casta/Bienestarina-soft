@@ -16,4 +16,6 @@ export class ServicioService {
     return this.http.get('http://localhost:3000/rol');
     console.log('Datos');
    }
+
+   insertardatos
 }
