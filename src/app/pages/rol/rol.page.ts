@@ -18,6 +18,34 @@ export class RolPage implements OnInit {
     private loadingCtrl: LoadingController
   ) { }
 
+  //consultar Datos
+  async ngOnInit() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Cargando..',
+    });
+    await loading.present();
+    this.Service.Obtenerdatos()
+      .subscribe(async (data) => {
+        this.usuarios = data;
+        console.log(data);
+        console.log('funciona');
+        await loading.dismiss();
+      }
+      );
+  }
+  //insertar Datos
+  insertDatos(RolPersona: string, Estado: number) {
+    const Rol1 = {
+      //variables iguales a la interface
+      RolPersona,
+      Estado,
+    };
+    this.Service.insertarRol(Rol1).subscribe((newRol) => {
+      this.usuarios.push(newRol);
+      this.presentToast('Rol Creado');
+    });
+  }
+  // ventana para crear rol
   async openAlert() {
     const alert = await this.alertCtrl.create({
       header: 'Crear un nuevo rol',
@@ -50,37 +78,7 @@ export class RolPage implements OnInit {
     });
     await alert.present();
   }
-
- //consultar Datos
-  async ngOnInit() {
-    const loading = await this.loadingCtrl.create({
-      message: 'Cargando..',
-    });
-    await loading.present();
-    this.Service.Obtenerdatos()
-      .subscribe( async (data) => {
-          this.usuarios = data;
-          console.log(data);
-          console.log('funciona');
-          await loading.dismiss();
-        }
-      );
-    //this.ionViewDidEnter();
-  }
-
-  //insertar Datos
-  insertDatos(RolPersona: string, Estado: number) {
-    const Rol1 = {
-      //variables iguales a la interface
-      RolPersona,
-      Estado,
-    };
-    this.Service.insertarRol(Rol1).subscribe((newRol) => {
-      this.usuarios.push(newRol);
-      this.presentToast('Rol Creado');
-    });
-  }
-
+  //metodo actualizar datos
   actualizarDatos(idRolPersona: number, RolPersona: string, Estado: number) {
     const Rol1 = {
       idRolPersona,
@@ -91,7 +89,7 @@ export class RolPage implements OnInit {
       this.usuarios.push(newRol);
     });
   }
-
+  //ventana de actualizar datos
   async openAlert1() {
     const alert = await this.alertCtrl.create({
       header: 'Actualizar un rol',
@@ -124,7 +122,6 @@ export class RolPage implements OnInit {
     });
     await alert.present();
   }
-
   //mensajes
   async presentToast(message: string) {
     const toast = await this.toastCtrl.create({
@@ -133,7 +130,7 @@ export class RolPage implements OnInit {
     });
     await toast.present();
   }
-
+  //animacion carga
   async presentLoading() {
     const loading = await this.loadingCtrl.create({
       message: 'Cargando..',

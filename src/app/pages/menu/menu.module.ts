@@ -35,6 +35,26 @@ const routes: Routes = [
         path: 'usuarios',
         loadChildren: '../usuarios/usuarios.module#UsuariosPageModule'
       },
+      {
+        path: 'barrio',
+        loadChildren: '../barrio/barrio.module#BarrioPageModule'
+      },
+      {
+        path: 'comuna',
+        loadChildren: '../comuna/comuna.module#ComunaPageModule'
+      },
+      { 
+        path: 'municipio', 
+        loadChildren: '../municipio/municipio.module#MunicipioPageModule' 
+      },
+      { 
+        path: 'centrozonal', 
+        loadChildren: '../centrozonal/centrozonal.module#CentrozonalPageModule' 
+      },
+      { 
+        path: 'regional', 
+        loadChildren: '../regional/regional.module#RegionalPageModule' 
+      },
     ]
   },
   {
@@ -54,8 +74,8 @@ const routes: Routes = [
 })
 export class MenuPageModule {
 
-constructor(public navCtrl: NavController , public auth:AuthService){
+  constructor(public navCtrl: NavController, public auth: AuthService) {
+
+  }
 
 }
-
- }

@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import { resolve, reject } from 'q';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { User } from '../interfaces/user';
 
-export interface User {
-  name:string;
-  rol: number;
-}
+
 @Injectable({
   providedIn: 'root'
 })

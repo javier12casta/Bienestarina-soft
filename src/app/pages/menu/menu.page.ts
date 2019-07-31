@@ -32,6 +32,11 @@ export class MenuPage implements OnInit {
         {title: 'Acudientes', url: '/menu/acudientes', name:'contacts'},
         {title: 'Rol', url: '/menu/rol', name:'contacts'},
         {title: 'Usuarios', url: '/menu/usuarios', name:'contacts'},
+        {title: 'Barrios', url: '/menu/barrio', name:'globe'},
+        {title: 'Comunas', url: '/menu/comuna', name:'globe'},
+        {title: 'Municipios', url: '/menu/municipio', name:'globe'},
+        {title: 'CentrosZonales', url: '/menu/centrozonal', name:'globe'},
+        {title: 'Regionales', url: '/menu/regional', name:'globe'},
       ];
     } else {
       this.pages = [
