@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServicioService } from '../../servicio.service';
 import { AlertController, ToastController, LoadingController } from '@ionic/angular';
 import { Rol } from 'src/app/interfaces/rol';
-import { async } from 'q';
+
 
 @Component({
   selector: 'app-rol',
@@ -86,10 +86,10 @@ export class RolPage implements OnInit {
       Estado,
     };
     this.Service.Actualizar(Rol1).subscribe((newRol) => {
-      this.usuarios.push(newRol);
+      this.usuarios.push(newRol);//lo pone al final del vector
     });
   }
-  //ventana de actualizar datos
+  //ventana de actualizar datos, esta es la ventan de actualiza aca se cargan los daots de la base
   async openAlert1() {
     const alert = await this.alertCtrl.create({
       header: 'Actualizar un rol',
@@ -113,8 +113,8 @@ export class RolPage implements OnInit {
         },
         {
           text: 'Actualizar',
-          handler: (data) => {
-            this.actualizarDatos(data.idRolPersona, data.RolPersona, data.Estado);
+          handler: (data) => {             
+            this.actualizarDatos(data.id, data.RolPersona, data.Estado);
             console.log(data);
           },
         }
