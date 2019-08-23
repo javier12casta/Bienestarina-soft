@@ -33,14 +33,13 @@ export class CentrozonalPage implements OnInit {
       );
   }
     //insertar Datos
-    insertDatos(CentrosZonales: string, Regional_idRegional: number, CodigoJerarquiaCZ: string, CodigoCZ: number , EstadoDatoMaestro : string) {
+    insertDatos(CentrosZonales: string, Regional_idRegional: number, CodigoJerarquiaCZ: string, CodigoCZ: number) {
       const Centrozonal1= {
         //variables iguales a la interface
         CentrosZonales,
         Regional_idRegional,
         CodigoJerarquiaCZ,
         CodigoCZ,
-        EstadoDatoMaestro,
       };
       this.Service.postCentro(Centrozonal1).subscribe((newCentrozonal) => {
         this.usuarios.push(newCentrozonal);
@@ -48,7 +47,7 @@ export class CentrozonalPage implements OnInit {
       });
     }
     // ventana para crear rol
-    async datosprimernivel() {
+    async openAlert() {
       const alert = await this.alertCtrl.create({
         header: 'Crear un nuevo Centro Zonal',
         inputs: [
@@ -72,11 +71,6 @@ export class CentrozonalPage implements OnInit {
             type: 'number',
             placeholder: `Codigo`,
           },
-          {
-            name: 'Estado del dato maestro',
-            type: 'text',
-            placeholder: `Estado del dato maestro`,
-          },
         ],
         buttons: [
           {
@@ -87,7 +81,7 @@ export class CentrozonalPage implements OnInit {
           {
             text: 'Crear',
             handler: (data) => {
-              this.insertDatos(data.CentrosZonales, data.Regional_idRegional,data.CodigoJerarquiaCZ,data.CodigoCZ,data.EstadoDatoMaestro);
+              this.insertDatos(data.CentrosZonales, data.Regional_idRegional,data.CodigoJerarquiaCZ,data.CodigoCZ);
               console.log(data);
             },
           }

@@ -9,9 +9,7 @@ import { Regional } from 'src/app/interfaces/regional';
   styleUrls: ['./regional.page.scss'],
 })
 export class RegionalPage implements OnInit {
-
   usuarios: Regional[] = [];
-
   constructor(
     private Service: ServicioService,
     private alertCtrl: AlertController,
@@ -36,7 +34,6 @@ export class RegionalPage implements OnInit {
   }
     //insertar Datos
     insertDatos(Regional: string) {
-
       const Regional1 = {
         //variables iguales a la interface
         Regional,
@@ -46,15 +43,15 @@ export class RegionalPage implements OnInit {
         this.presentToast('Regional Creado');
       });
     }
-   
-    async datosegundonivel() {
+    // ventana para crear rol
+    async openAlert() {
       const alert = await this.alertCtrl.create({
-        header: 'Crear un nueva region',
+        header: 'Crear un nuevo Regional',
         inputs: [
           {
-            name: 'Nombre de la region',
+            name: 'Regional',
             type: 'text',
-            placeholder: 'Nombre de la region',
+            placeholder: 'Nombre Regional',
           }
         ],
         buttons: [
@@ -66,9 +63,8 @@ export class RegionalPage implements OnInit {
           {
             text: 'Crear',
             handler: (data) => {
-             
               this.insertDatos(data.Regional);
-  
+              console.log(data);
             },
           }
         ]
