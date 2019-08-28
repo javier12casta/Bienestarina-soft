@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-entrega',
@@ -8,7 +8,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class EntregaPage implements OnInit {
 
-  constructor(private menuCtrl: MenuController) { }
+  constructor(private menuCtrl: MenuController , private loadingCtrl: LoadingController) { }
 
   ngOnInit() {
   }
@@ -17,6 +17,15 @@ export class EntregaPage implements OnInit {
 
 this.menuCtrl.toggle();
 
+  }
+
+  async finish() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Se han registrado  asociados al primer nivel',
+      duration: 2000
+    });
+    await loading.present();
+    return loading;
   }
 
 }

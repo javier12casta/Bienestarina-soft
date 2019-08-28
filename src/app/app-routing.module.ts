@@ -9,6 +9,11 @@ const routes: Routes = [
   //{ path: 'entrega', loadChildren: './pages/entrega/entrega.module#EntregaPageModule' },
   //{ path: 'inventario', loadChildren: './pages/inventario/inventario.module#InventarioPageModule' },
   { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
+ // { path: 'uds', loadChildren: './pages/uds/uds.module#UdsPageModule' },
+
+  
+
+
   //{ path: 'regional', loadChildren: './pages/regional/regional.module#RegionalPageModule' },
   //{ path: 'centrozonal', loadChildren: './pages/centrozonal/centrozonal.module#CentrozonalPageModule' },
   //{ path: 'municipio', loadChildren: './pages/municipio/municipio.module#MunicipioPageModule' },

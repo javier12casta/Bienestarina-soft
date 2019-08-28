@@ -10,6 +10,9 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+
+    <ion-label class="my-label">Centro Zonal</ion-label>
+
   <ion-list>
     <ion-label>Centros Zonales</ion-label>
     <ion-item *ngFor="let CZ of usuarios">
@@ -19,4 +22,35 @@
       </ion-button>
     </ion-item>
   </ion-list>
+
+  <ion-label>Estado del maestro</ion-label>
+  <ion-input type="number" inputmode="numeric" placeholder=" ingresar dato" clearInput="true" (ionChange)="ccapturarDatos( $event )"></ion-input>
+
+  <ion-label>Nombre Centro Zonal</ion-label>
+  <ion-input type="number"></ion-input>
+
+  <ion-item>
+    <ion-label>Regional</ion-label>
+    <ion-select placeholder="Selecciona una">
+      <ion-select-option value="1">1</ion-select-option>
+      <ion-select-option value="2">2</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-label>Municipio</ion-label>
+  <ion-input type="text"></ion-input>
+
+  <ion-label>localidad comuna o vereda</ion-label>
+  <ion-input type="text"></ion-input>
+
+  <ion-label>CodigoJerarquiaCZ</ion-label>
+  <ion-input type="text"></ion-input>
+
+  <ion-label>CodigoCZ</ion-label>
+  <ion-input type="number"></ion-input>
+
+  <ion-button size="default" color="success" expand="block" type="submit" (click)="finish()">Enviar</ion-button>
+
+
+
 </ion-content>

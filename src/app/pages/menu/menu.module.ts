@@ -55,6 +55,10 @@ const routes: Routes = [
         path: 'regional', 
         loadChildren: '../regional/regional.module#RegionalPageModule' 
       },
+      { 
+        path: 'uds',
+        loadChildren: '../uds/uds.module#UdsPageModule'
+      },
     ]
   },
   {

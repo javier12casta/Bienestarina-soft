@@ -1,68 +1,90 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+    <ion-buttons slot="start"> 
     </ion-buttons>
     <ion-title>Beneficiarios</ion-title>
+
+    <ion-tabs>
+        <ion-tab-bar slot="bottom">
+
+          <ion-tab-button tab="tab1">
+            <ion-icon name="flash"></ion-icon>
+            <ion-label>Datos generales Beneficiario</ion-label>          
+          </ion-tab-button>
+      
+          <ion-tab-button tab="tab2">
+            <ion-icon name="apps"></ion-icon>
+            <ion-label>Acudiente Beneficiario ICBF</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="tab3">
+            <ion-icon name="map"></ion-icon>
+            <ion-label>Datos Contacto Beneficiario</ion-label>
+          </ion-tab-button>
+      
+        </ion-tab-bar>
+      </ion-tabs>
+
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content class="ion-padding-top">
-  <div class="panel">
-    <ion-label>Primer Nombre</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-label>Segundo Nombre</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-label>Primer Apellido</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-label>Segundo Apellido</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-item>
-      <ion-label>Genero</ion-label>
-      <ion-select placeholder="Seleciona una">
-        <ion-select-option value="f">Femenino</ion-select-option>
-        <ion-select-option value="m">Masculino</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>Tipo Documento</ion-label>
-      <ion-select placeholder="Selececiona una">
-        <ion-select-option value="CC">Cedula de ciudadania</ion-select-option>
-        <ion-select-option value="TI">Tarjeta de identidad</ion-select-option>
-        <ion-select-option value="TP"> Tarjeta pasaporte</ion-select-option>
-        <ion-select-option value="RC"> Registro civil</ion-select-option>
-        <ion-select-option value="CE">Cédula de extranjería</ion-select-option>
-        <ion-select-option value="DNI">Documento nacional de identidad </ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-label>Numero de Documento</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-label>Estado</ion-label>
-    <ion-input type="text"></ion-input>
-
-    <ion-item>
-      <ion-label>Fecha de ingreso </ion-label>
-      <li></li>
-      <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Fecha de Nacimiento</ion-label>
-      <li></li>
-      <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
-    </ion-item>
-
-    <ion-label>Modalidad</ion-label>
-    <ion-select placeholder="Selecciona una">
-      <ion-select-option value="MI">Modalidad Institucional</ion-select-option>
-      <ion-select-option value="MF">Modalidad Familiar</ion-select-option>
-      <ion-select-option value="MPEI">Modalidad Propia e Intercultural </ion-select-option>
-      <ion-select-option value="MC">Modalidad Comunitaria</ion-select-option>
-    </ion-select>
-
-
-    <ion-button size="default" color="success" expand="block">Enviar</ion-button>
-
-  </div>
-</ion-content>
+    <div class="panel">
+  
+      
+        <ion-item>
+            <ion-label>Tipo Documento</ion-label>
+            <ion-select placeholder="Selececiona una">
+              <ion-select-option value="CC">Cedula de ciudadania</ion-select-option>
+              <ion-select-option value="TI">Tarjeta de identidad</ion-select-option>
+              <ion-select-option value="TP"> Tarjeta pasaporte</ion-select-option>
+              <ion-select-option value="RC"> Registro civil</ion-select-option>
+              <ion-select-option value="CE">Cédula de extranjería</ion-select-option>
+              <ion-select-option value="DNI">Documento nacional de identidad </ion-select-option>
+            </ion-select>
+          </ion-item>
+      
+          <ion-label>Numero de Documento</ion-label>
+          <ion-input type="text"></ion-input>
+          <ion-label>Estado</ion-label>
+          <ion-input type="text"></ion-input>
+  
+      <ion-label>Nombres</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>Apillidos</ion-label>
+      <ion-input type="text"></ion-input>
+      
+      <ion-item>
+        <ion-label>Genero</ion-label>
+        <ion-select placeholder="Seleciona una">
+          <ion-select-option value="f">Femenino</ion-select-option>
+          <ion-select-option value="m">Masculino</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+      <ion-item>
+          <ion-label>Fecha de Nacimiento</ion-label>
+          <li></li>
+          <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
+        </ion-item>
+  
+        <ion-label>servicio o Modalidad</ion-label>
+        <ion-select placeholder="Selecciona una">
+          <ion-select-option value="MI">Modalidad Institucional</ion-select-option>
+          <ion-select-option value="MF">Modalidad Familiar</ion-select-option>
+          <ion-select-option value="MPEI">Modalidad Propia e Intercultural </ion-select-option>
+          <ion-select-option value="MC">Modalidad Comunitaria</ion-select-option>
+        </ion-select>
+  
+        
+      <ion-item>
+        <ion-label>Fecha de ingreso </ion-label>
+        <li></li>
+        <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
+      </ion-item>
+  
+      <ion-button size="default" color="success" expand="block">Enviar</ion-button>
+  
+    </div>
+  </ion-content>

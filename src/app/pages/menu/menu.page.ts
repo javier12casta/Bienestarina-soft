@@ -37,6 +37,8 @@ export class MenuPage implements OnInit {
         {title: 'Municipios', url: '/menu/municipio', name:'globe'},
         {title: 'CentrosZonales', url: '/menu/centrozonal', name:'globe'},
         {title: 'Regionales', url: '/menu/regional', name:'globe'},
+        {title: 'Uds', url: '/menu/uds', name:'globe'},
+        
       ];
     } else {
       this.pages = [

@@ -46,11 +46,27 @@ export class CentrozonalPage implements OnInit {
         this.presentToast('Centro Zonal Creado');
       });
     }
+
+    ConsultarDatos(){
+
+    
+
+    }
+
+
+
     // ventana para crear rol
     async openAlert() {
       const alert = await this.alertCtrl.create({
         header: 'Crear un nuevo Centro Zonal',
         inputs: [
+
+          {
+            name: 'estado del dato maestro',
+            type: 'number',
+            placeholder: 'estado del dato maestro',
+          },
+
           {
             name: 'CentrosZonales',
             type: 'text',
@@ -60,6 +76,16 @@ export class CentrozonalPage implements OnInit {
             name: 'Regional_idRegional',
             type: 'number',
             placeholder: `Regional`,
+          },
+          {
+            name: 'Municipio',
+            type: 'text',
+            placeholder: `municipio`,
+          },
+          {
+            name: 'localidad comuna o vereda',
+            type: 'text',
+            placeholder: `localidad comuna o vereda`,
           },
           {
             name: 'CodigoJerarquiaCZ',
@@ -107,4 +133,18 @@ export class CentrozonalPage implements OnInit {
     await loading.present();
     return loading;
   }
+
+  async finish() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Se han registrado  de primer nivel',
+      duration: 2000
+    });
+    await loading.present();
+    return loading;
+  }
+
+
+   
+
+
 }
