@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>listadoPrecios</ion-title>
+    <ion-button  slot="end">
+        Inhabilitar
+       </ion-button>
+      <ion-button  slot="end">
+       Modificar
+      </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-label>Codigo</ion-label>
+    <ion-input type="number"></ion-input>
+
+    <ion-item>
+        <ion-label>Estado del dato maestro</ion-label>
+        <ion-select placeholder="Selecciona una">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-label>referencia</ion-label>
+  <ion-input type="text"></ion-input>
+
+  <ion-item>
+      <ion-label>Mes</ion-label>
+      <ion-select placeholder="Selecciona una">
+        <ion-select-option value="1">Enero</ion-select-option>
+        <ion-select-option value="2">Febrero</ion-select-option>
+        <ion-select-option value="2">Marzo</ion-select-option>
+        <ion-select-option value="2">Abril</ion-select-option>
+        <ion-select-option value="2">Mayo</ion-select-option>
+        <ion-select-option value="2">Junio</ion-select-option>
+        <ion-select-option value="2">Julio</ion-select-option>
+        <ion-select-option value="2">Agosto</ion-select-option>
+        <ion-select-option value="2">Septiembre</ion-select-option>
+        <ion-select-option value="2">Octubre</ion-select-option>
+        <ion-select-option value="2">Noviembre</ion-select-option>
+        <ion-select-option value="2">Diciembre</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-label>Año</ion-label>
+    <ion-input type="number"></ion-input>
+
+    <ion-label>Valor</ion-label>
+    <ion-input type="number"></ion-input>
+
+    <ion-button size="default" color="success" expand="block" type="submit" (click)="finish()">Aceptar</ion-button>
+
+  
+</ion-content>

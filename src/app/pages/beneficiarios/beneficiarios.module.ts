@@ -11,6 +11,21 @@ const routes: Routes = [
   {
     path: '',
     component: BeneficiariosPage
+  },
+  {
+    path: 'datos-contacto-beneficiario', 
+    loadChildren: '../datos-contacto-beneficiario/datos-contacto-beneficiario.module#DatosContactoBeneficiarioPageModule'
+  },
+  {
+
+    path: 'acudiente-beneficiario', 
+    loadChildren: '../acudiente-beneficiario/acudiente-beneficiario.module#AcudienteBeneficiarioPageModule'
+
+  },{
+
+    path: 'datos-generales-beneficiario', 
+    loadChildren: '../datos-generales-beneficiario/datos-generales-beneficiario.module#DatosGeneralesBeneficiarioPageModule'
+
   }
 ];
 

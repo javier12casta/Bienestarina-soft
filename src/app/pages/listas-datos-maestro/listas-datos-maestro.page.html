@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ListasDatosMaestro</ion-title>
+
+    <ion-tabs>
+        <ion-tab-bar slot="bottom">
+
+          <ion-tab-button tab="tab1" routerLink="../lista-maestros-bienestarina">
+            <ion-icon name="flash"></ion-icon>
+            <ion-label>Referencias Bienestarina</ion-label>          
+          </ion-tab-button>
+
+          <ion-tab-button tab="tab1" routerLink="../listado-precios">
+            <ion-icon name="flash"></ion-icon>
+            <ion-label>listado precios</ion-label>          
+          </ion-tab-button>
+      
+        </ion-tab-bar>
+      </ion-tabs>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+  <ion-button slot="end">
+      Inhabilitar
+     </ion-button>
+    <ion-button  slot="end">
+     Modificar
+    </ion-button>
+ </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-label>Servicios y modalidades</ion-label>
+
+    <ion-item>
+        <ion-label>Estado del dato maestro</ion-label>
+        <ion-select placeholder="Selecciona una opcion">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+          <ion-label>Codigo servicio y modalidad</ion-label>
+          <ion-input type="number"></ion-input>
+
+          <ion-label>Modalidad</ion-label>
+          <ion-input type="text"></ion-input>
+
+          <ion-button size="default" color="success" expand="block" type="submit" (click)="finish()">Aceptar</ion-button>
+
+
+</ion-content>

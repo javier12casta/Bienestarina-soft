@@ -2,24 +2,50 @@
   <ion-toolbar color="primary">
     <ion-menu-button type="buttons" slot="start"></ion-menu-button>
     <ion-title>Usuarios</ion-title>
+    <ion-tabs>
+        <ion-tab-bar slot="bottom">
+
+          <ion-tab-button tab="tab1" routerLink="../datos-generales-usuario">
+            <ion-icon name="flash"></ion-icon>
+            <ion-label>Datos generales</ion-label>          
+          </ion-tab-button>
+      
+          <ion-tab-button tab="tab2" routerLink="../usuarioy-roles">
+            <ion-icon name="apps"></ion-icon>
+            <ion-label>Usuario y asignacion de roles</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="tab3" routerLink="../datos-contacto-usuario">
+            <ion-icon name="map"></ion-icon>
+            <ion-label>Datos de contacto</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
   </ion-toolbar>
+  <ion-toolbar>
+  <ion-button (click)="openAlert()" slot="end">
+      Inhabilitar
+     </ion-button>
+    <ion-button (click)="openAlert()" slot="end">
+     Modificar
+    </ion-button>
+ </ion-toolbar>
+
 </ion-header>
 
 <ion-content class="ion-padding">
   <div class="panel">
-    <ion-label>Nombre usuario</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-label>Contraseña</ion-label>
-    <ion-input type="password"></ion-input>
-    <ion-item>
-      <ion-label>Rol</ion-label>
-      <ion-select placeholder="Seleciona una">
-        <ion-select-option value="adm">Administrador</ion-select-option>
-        <ion-select-option value="profe">Profesora</ion-select-option>
-        <ion-select-option value="comu">Comuna</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-button size="default" color="success" expand="block">Enviar</ion-button>
+
+      <ion-item>
+          <ion-label>Nivel</ion-label>
+          <ion-select placeholder="Selecciona una">
+            <ion-select-option value="1">CentroZonal</ion-select-option>
+            <ion-select-option value="2">Punto de entrega</ion-select-option>
+            <ion-select-option value="2">unidad de servicio</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+        <ion-button size="default" color="success" expand="block">Siguiente</ion-button>
 
   </div>
 </ion-content>

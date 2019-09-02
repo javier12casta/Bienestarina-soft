@@ -9,6 +9,22 @@ const routes: Routes = [
   //{ path: 'entrega', loadChildren: './pages/entrega/entrega.module#EntregaPageModule' },
   //{ path: 'inventario', loadChildren: './pages/inventario/inventario.module#InventarioPageModule' },
   { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
+ // { path: 'listado-precios', loadChildren: './pages/listado-precios/listado-precios.module#ListadoPreciosPageModule' },
+
+ // { path: 'lista-maestros-bienestarina', loadChildren: './pages/lista-maestros-bienestarina/lista-maestros-bienestarina.module#ListaMaestrosBienestarinaPageModule' },
+
+//  { path: 'datos-generales-beneficiario', loadChildren: './pages/datos-generales-beneficiario/datos-generales-beneficiario.module#DatosGeneralesBeneficiarioPageModule' },
+
+ // { path: 'listas-datos-maestro', loadChildren: './pages/listas-datos-maestro/listas-datos-maestro.module#ListasDatosMaestroPageModule' },
+
+ // { path: 'acudiente-beneficiario', loadChildren: './pages/acudiente-beneficiario/acudiente-beneficiario.module#AcudienteBeneficiarioPageModule' },
+  //{ path: 'datos-contacto-beneficiario', loadChildren: './pages/datos-contacto-beneficiario/datos-contacto-beneficiario.module#DatosContactoBeneficiarioPageModule' },
+ // { path: 'datos-generales-usuario', loadChildren: './pages/datos-generales-usuario/datos-generales-usuario.module#DatosGeneralesUsuarioPageModule' },
+ // { path: 'usuarioy-roles', loadChildren: './pages/usuarioy-roles/usuarioy-roles.module#UsuarioyRolesPageModule' },
+//  { path: 'datos-contacto-usuario', loadChildren: './pages/datos-contacto-usuario/datos-contacto-usuario.module#DatosContactoUsuarioPageModule' },
+
+  //{ path: 'reportes', loadChildren: './pages/reportes/reportes.module#ReportesPageModule' },
+
  // { path: 'uds', loadChildren: './pages/uds/uds.module#UdsPageModule' },
 
   

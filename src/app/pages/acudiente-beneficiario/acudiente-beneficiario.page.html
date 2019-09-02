@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>AcudienteBeneficiario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+        <ion-label>Tipo Documento</ion-label>
+        <ion-select placeholder="Selececiona una">
+          <ion-select-option value="CC">Cedula de ciudadania</ion-select-option>
+          <ion-select-option value="CE">Cédula de extranjería</ion-select-option>
+          <ion-select-option value="TP"> Tarjeta pasaporte</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-label>Numero de Documento</ion-label>
+      <ion-input type="text"></ion-input>
+
+      <ion-label>Nombres</ion-label>
+  <ion-input type="text"></ion-input>
+
+  <ion-label>Apellidos</ion-label>
+  <ion-input type="text"></ion-input>
+
+  <ion-item>
+      <ion-label>Parentesco Beneficiario</ion-label>
+      <ion-select placeholder="Selececiona una">
+        <ion-select-option value="CC">Padre</ion-select-option>
+        <ion-select-option value="CE">Madre</ion-select-option>
+        <ion-select-option value="TP"> Hermano(a)</ion-select-option>
+        <ion-select-option value="TP"> Abuelo(a)</ion-select-option>
+        <ion-select-option value="TP"> Tio(a)</ion-select-option>
+        <ion-select-option value="TP"> persona con custodia</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Genero</ion-label>
+        <ion-select placeholder="Selececiona una">
+          <ion-select-option value="H">H</ion-select-option>
+          <ion-select-option value="M">M</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Fecha de Nacimiento</ion-label>
+          <li></li>
+          <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Fecha de ingreso </ion-label>
+            <li></li>
+            <ion-datetime position="floating" display-format="MMM DD, YYYY "></ion-datetime>
+          </ion-item>
+
+          <ion-label>Registro Biometrico</ion-label>
+          <ion-input type="text"></ion-input>
+
+          <ion-button size="default" color="success" expand="block">Siguiente</ion-button>
+
+</ion-content>

@@ -59,11 +59,16 @@ const routes: Routes = [
         path: 'uds',
         loadChildren: '../uds/uds.module#UdsPageModule'
       },
+      { 
+        path: 'reportes', 
+        loadChildren: '../reportes/reportes.module#ReportesPageModule'
+      },
+      { 
+        path: 'listas-datos-maestro', 
+        loadChildren: '../listas-datos-maestro/listas-datos-maestro.module#ListasDatosMaestroPageModule'
+      },
+
     ]
-  },
-  {
-    path: '',
-    redirectTo: '/menu/entrega'
   }
 ];
 
