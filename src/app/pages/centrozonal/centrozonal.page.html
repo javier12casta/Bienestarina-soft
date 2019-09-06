@@ -2,12 +2,12 @@
   <ion-toolbar color="primary">
     <ion-menu-button type="buttons" slot="start"></ion-menu-button>
     <ion-title>Centros Zonales</ion-title>
-    <ion-button (click)="openAlert()" slot="end">
+    <ion-button  slot="end">
       Inhabilitar
      </ion-button>
 
-    <ion-button (click)="openAlert()" slot="end">
-     Modificar
+    <ion-button  slot="end">
+     Modificar Datos Primer Nivel
     </ion-button>
 
   </ion-toolbar>
@@ -31,13 +31,46 @@
   <ion-input type="number" inputmode="numeric" placeholder=" ingresar dato" clearInput="true" (ionChange)="ccapturarDatos( $event )"></ion-input>
 
   <ion-label>Nombre Centro Zonal</ion-label>
-  <ion-input type="number"></ion-input>
+  <ion-input type="text"></ion-input>
 
   <ion-item>
     <ion-label>Regional</ion-label>
     <ion-select placeholder="Selecciona una">
-      <ion-select-option value="1">1</ion-select-option>
-      <ion-select-option value="2">2</ion-select-option>
+      <ion-select-option value="1">amazonas</ion-select-option>
+      <ion-select-option value="2">Antioquia</ion-select-option>
+      <ion-select-option value="3">Arauca</ion-select-option>
+      <ion-select-option value="3">Atlantico</ion-select-option>
+      <ion-select-option value="3">Bogota</ion-select-option>
+      <ion-select-option value="3">Bolivar</ion-select-option>
+      <ion-select-option value="3">Boyaca</ion-select-option>
+      <ion-select-option value="3">Caldas</ion-select-option>
+      <ion-select-option value="3">Caqueta</ion-select-option>
+      <ion-select-option value="3">Casanare</ion-select-option>
+      <ion-select-option value="3">Cauca</ion-select-option>
+      <ion-select-option value="3">Cesar</ion-select-option>
+      <ion-select-option value="3">Choco</ion-select-option>
+      <ion-select-option value="3">Cundinamarca</ion-select-option>
+      <ion-select-option value="3">Cordoba</ion-select-option>
+      <ion-select-option value="3">Guania</ion-select-option>
+      <ion-select-option value="3">Guaviare</ion-select-option>
+      <ion-select-option value="3">Huila</ion-select-option>
+      <ion-select-option value="3">Guajira</ion-select-option>
+      <ion-select-option value="3">Magdalena</ion-select-option>
+      <ion-select-option value="3">Meta</ion-select-option>
+      <ion-select-option value="3">Nariño</ion-select-option>
+      <ion-select-option value="3">Norte de santander</ion-select-option>
+      <ion-select-option value="3">putumayo</ion-select-option>
+      <ion-select-option value="3">Quindio</ion-select-option>
+      <ion-select-option value="3">Risaralda</ion-select-option>
+      <ion-select-option value="3">San Andres</ion-select-option>
+      <ion-select-option value="3">Santander</ion-select-option>
+      <ion-select-option value="3">Sucre</ion-select-option>
+      <ion-select-option value="3">Tolima</ion-select-option>
+      <ion-select-option value="3">Valle</ion-select-option>
+      <ion-select-option value="3">Vaupes</ion-select-option>
+      <ion-select-option value="3">Vichada</ion-select-option>
+
+
     </ion-select>
   </ion-item>
 
@@ -53,7 +86,7 @@
   <ion-label>CodigoCZ</ion-label>
   <ion-input type="number"></ion-input>
 
-  <ion-button size="default" color="success" expand="block" type="submit" (click)="finish()">Enviar</ion-button>
+  <ion-button size="default" color="success" expand="block" type="submit" (click)="finish()">Crear</ion-button>
 
 
 

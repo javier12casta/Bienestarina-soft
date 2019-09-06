@@ -9,7 +9,9 @@ import { Centrozonal } from 'src/app/interfaces/centrozonal';
   styleUrls: ['./centrozonal.page.scss'],
 })
 export class CentrozonalPage implements OnInit {
+
   usuarios: Centrozonal[] = [];
+  
   constructor(
     private Service: ServicioService,
     private alertCtrl: AlertController,
@@ -33,13 +35,24 @@ export class CentrozonalPage implements OnInit {
       );
   }
     //insertar Datos
-    insertDatos(CentrosZonales: string, Regional_idRegional: number, CodigoJerarquiaCZ: string, CodigoCZ: number) {
+    insertDatos(NombreCentroZonal: string,
+      idMunicipios: number,
+      idComunas: number,
+      idBarriosVeredas: number,
+      CodigoExternoJcz: string,
+      CodigoExternoCZ: number,
+      Estado: number,
+      idRegional: number) {
       const Centrozonal1= {
         //variables iguales a la interface
-        CentrosZonales,
-        Regional_idRegional,
-        CodigoJerarquiaCZ,
-        CodigoCZ,
+        NombreCentroZonal,
+        idMunicipios,
+        idComunas,
+        idBarriosVeredas,
+        CodigoExternoJcz,
+        CodigoExternoCZ,
+        Estado,
+        idRegional
       };
       this.Service.postCentro(Centrozonal1).subscribe((newCentrozonal) => {
         this.usuarios.push(newCentrozonal);
@@ -47,75 +60,7 @@ export class CentrozonalPage implements OnInit {
       });
     }
 
-    ConsultarDatos(){
-
-    
-
-    }
-
-
-
-    // ventana para crear rol
-    async openAlert() {
-      const alert = await this.alertCtrl.create({
-        header: 'Crear un nuevo Centro Zonal',
-        inputs: [
-
-          {
-            name: 'estado del dato maestro',
-            type: 'number',
-            placeholder: 'estado del dato maestro',
-          },
-
-          {
-            name: 'CentrosZonales',
-            type: 'text',
-            placeholder: 'Nombre Centro Zonal',
-          },
-          {
-            name: 'Regional_idRegional',
-            type: 'number',
-            placeholder: `Regional`,
-          },
-          {
-            name: 'Municipio',
-            type: 'text',
-            placeholder: `municipio`,
-          },
-          {
-            name: 'localidad comuna o vereda',
-            type: 'text',
-            placeholder: `localidad comuna o vereda`,
-          },
-          {
-            name: 'CodigoJerarquiaCZ',
-            type: 'text',
-            placeholder: 'Codigo Jerarquia',
-          },
-          {
-            name: 'CodigoCZ',
-            type: 'number',
-            placeholder: `Codigo`,
-          },
-        ],
-        buttons: [
-          {
-            text: 'Cancelar',
-            role: 'cancel',
-            cssClass: 'secondary',
-          },
-          {
-            text: 'Crear',
-            handler: (data) => {
-              this.insertDatos(data.CentrosZonales, data.Regional_idRegional,data.CodigoJerarquiaCZ,data.CodigoCZ);
-              console.log(data);
-            },
-          }
-        ]
-      });
-      await alert.present();
-    }
-
+  
       //mensajes
   async presentToast(message: string) {
     const toast = await this.toastCtrl.create({
