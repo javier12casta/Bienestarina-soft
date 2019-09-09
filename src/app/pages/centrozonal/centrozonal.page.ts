@@ -12,12 +12,33 @@ export class CentrozonalPage implements OnInit {
 
   usuarios: Centrozonal[] = [];
   
+
+
+
   constructor(
     private Service: ServicioService,
     private alertCtrl: AlertController,
     private toastCtrl: ToastController,
     private loadingCtrl: LoadingController
   ) { }
+
+public insert(req: Request , res: Response ){
+
+
+
+}
+
+public delete(req: Request , res: Response ){
+
+
+}
+
+config():void{
+
+
+}
+
+
 
   //consultar Datos
   async ngOnInit() {
