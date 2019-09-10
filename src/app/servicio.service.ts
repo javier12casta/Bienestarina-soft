@@ -18,19 +18,23 @@ export class ServicioService {
     console.log("hello service");
   }
 //------rol Persona--------
-// metodo get de rolPersona
+// metodo get de roles
   Obtenerdatos() {
     const path = `${this.api}/rol`;
     return this.http.get<Rol[]>(path);
   }
+// metodo get de rol
+  getRol(id: Rol) {
+    return this.http.get(`${this.api}/rol/${id.idRolPersona}`);
+  }
 //metodo post de rolPersona
   insertarRol(rol: Rol) {
-    const path = `${this.api}/RolInsert`;
+    const path = `${this.api}/rol`;
     return this.http.post<Rol>(path, rol);
   }
 //metodo put de rolPersona
   Actualizar(rol: Rol) {
-    const path = `${this.api}/RolUpdate/${rol.idRolPersona}`;
+    const path = `${this.api}/rol/${rol.idRolPersona}`;
     return this.http.put<Rol>(path, rol);
   }
 //-----Barrio Vereda------
@@ -91,16 +95,16 @@ putCentro(cen: Centrozonal) {
 }
 //---- Regional ----
 getRegional(){
-  const path = `${this.api}/Regional`;
+  const path = `${this.api}/regional`;
   return this.http.get<[Regional]>(path);
 }
 
 postRegional(regi: Regional){
-  const path = `${this.api}/RegionalInsert`;
+  const path = `${this.api}/regional`;
   return this.http.post<Regional>(path, regi);
 }
 putRegional(regi: Regional) {
-  const path = `${this.api}/RegionalUpdate/${regi.idRegional}`;
+  const path = `${this.api}/regional/${regi.idRegional}`;
   return this.http.put<Regional>(path, regi);
 }
 }
