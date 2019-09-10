@@ -9,6 +9,7 @@ import { Regional } from 'src/app/interfaces/regional';
   styleUrls: ['./regional.page.scss'],
 })
 export class RegionalPage implements OnInit {
+  
   usuarios: Regional[] = [];
   constructor(
     private Service: ServicioService,

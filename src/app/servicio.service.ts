@@ -58,7 +58,7 @@ getComuna(){
 }
 
 postComuna(comu: Comuna){
-  const path = `${this.api}/ComunasInsert`;
+  const path = `${this.api}/comuna`;
   return this.http.post<Comuna>(path, comu);
 }
 putComuna(comu: Comuna) {
@@ -72,7 +72,7 @@ getMunicipio(){
 }
 
 postMunicipio(muni: Municipio){
-  const path = `${this.api}/MunicipioInsert`;
+  const path = `${this.api}/municipio`;
   return this.http.post<Municipio>(path, muni);
 }
 putMunicipio(muni: Municipio) {

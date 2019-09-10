@@ -11,12 +11,13 @@
 
 <ion-content class="ion-padding">
   <ion-list>
-    <ion-label>Municipios</ion-label>
-    <ion-item *ngFor="let muni of usuarios">
-      {{muni.idMunicipios}} {{muni.Municipio}} {{muni.CentrosZonales_idCentrosZonales}}
-      <ion-button (click)="openAlert1()" slot="end">
-        <ion-icon slot="end" name="create"></ion-icon>
-      </ion-button>
-    </ion-item>
+  
+    <ion-label>Nombre Municipio</ion-label>
+    <ion-input type="text"></ion-input>
+    <ion-label>Region</ion-label>
+    <ion-input type="text"></ion-input>
+
+    <ion-button size="default" color="success" expand="block" type="submit" (click)="RegistrarMunicipio()">registrar</ion-button>
+
   </ion-list>
 </ion-content>
