@@ -82,11 +82,11 @@ getCentro(){
 }
 
 postCentro(cen: Centrozonal){
-  const path = `${this.api}/CZInsert`;
+  const path = `${this.api}/centrosZ`;
   return this.http.post<Centrozonal>(path, cen);
 }
 putCentro(cen: Centrozonal) {
-  const path = `${this.api}/CZUpdate/${cen.idCentrosZonales}`;
+  const path = `${this.api}/centrosZ/${cen.idCentrosZonales}`;
   return this.http.put<Centrozonal>(path, cen);
 }
 //---- Regional ----
