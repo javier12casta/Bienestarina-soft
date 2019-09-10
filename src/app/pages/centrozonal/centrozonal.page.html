@@ -15,20 +15,10 @@
 
 <ion-content class="ion-padding">
 
-    <ion-label class="my-label">Centro Zonal</ion-label>
-
-  <ion-list>
-    <ion-label>Centros Zonales</ion-label>
-    <ion-item *ngFor="let CZ of usuarios">
-      {{CZ.	idCentrosZonales}} {{CZ.CentrosZonales}} {{CZ.Regional_idRegional}} {{CZ.CodigoJerarquiaCZ	}} {{CZ.CodigoCZ}}
-      <ion-button (click)="openAlert1()" slot="end">
-        <ion-icon slot="end" name="create"></ion-icon>
-      </ion-button>
-    </ion-item>
-  </ion-list>
-
+  <ion-label class="my-label">Centro Zonal</ion-label>
+  <li></li>
   <ion-label>Estado del maestro</ion-label>
-  <ion-input type="number" inputmode="numeric" placeholder=" ingresar dato" clearInput="true" (ionChange)="ccapturarDatos( $event )"></ion-input>
+  <ion-input type="number" inputmode="numeric" placeholder=" ingresar dato" clearInput="true" ></ion-input>
 
   <ion-label>Nombre Centro Zonal</ion-label>
   <ion-input type="text"></ion-input>
@@ -86,8 +76,6 @@
   <ion-label>CodigoCZ</ion-label>
   <ion-input type="number"></ion-input>
 
-  <ion-button size="default" color="success" expand="block" type="submit" (click)="finish()">Crear</ion-button>
-
-
+  <ion-button size="default" color="success" expand="block" type="submit" (click)="insertCentroZonal()">crear</ion-button>
 
 </ion-content>

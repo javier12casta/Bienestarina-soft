@@ -2,14 +2,18 @@ import { Injectable } from '@angular/core';
 import { resolve, reject } from 'q';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { User } from '../interfaces/user';
-
+import { Centrozonal } from '../interfaces/centrozonal';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   currentUser: User; 
-  constructor() { }
+  centroz : Centrozonal;
+  API_URI ='http://localhost:3000/centrosZ';
+
+
+  constructor(private http : HttpClient) { }
 
   login (name: string, pw: string) : Promise<boolean>{
     return new Promise((resolve, reject) =>{
@@ -43,4 +47,6 @@ export class AuthService {
   isAdmin(){
     return this.currentUser.rol == 1;
   }
+
+
 }

@@ -9,6 +9,8 @@ const routes: Routes = [
   //{ path: 'entrega', loadChildren: './pages/entrega/entrega.module#EntregaPageModule' },
   //{ path: 'inventario', loadChildren: './pages/inventario/inventario.module#InventarioPageModule' },
   { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
+ // { path: 'puntoentrega', loadChildren: './pages/puntoentrega/puntoentrega.module#PuntoentregaPageModule' },
+
  // { path: 'listado-precios', loadChildren: './pages/listado-precios/listado-precios.module#ListadoPreciosPageModule' },
 
  // { path: 'lista-maestros-bienestarina', loadChildren: './pages/lista-maestros-bienestarina/lista-maestros-bienestarina.module#ListaMaestrosBienestarinaPageModule' },
