@@ -8,8 +8,7 @@ const routes: Routes = [
   //{ path: 'register', loadChildren: './pages/register/register.module#RegisterPageModule' },
   //{ path: 'entrega', loadChildren: './pages/entrega/entrega.module#EntregaPageModule' },
   //{ path: 'inventario', loadChildren: './pages/inventario/inventario.module#InventarioPageModule' },
-  { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
- // { path: 'puntoentrega', loadChildren: './pages/puntoentrega/puntoentrega.module#PuntoentregaPageModule' },
+   // { path: 'puntoentrega', loadChildren: './pages/puntoentrega/puntoentrega.module#PuntoentregaPageModule' },
 
  // { path: 'listado-precios', loadChildren: './pages/listado-precios/listado-precios.module#ListadoPreciosPageModule' },
 
@@ -27,12 +26,9 @@ const routes: Routes = [
 
   //{ path: 'reportes', loadChildren: './pages/reportes/reportes.module#ReportesPageModule' },
 
- // { path: 'uds', loadChildren: './pages/uds/uds.module#UdsPageModule' },
-
-  
-
-
+  // { path: 'uds', loadChildren: './pages/uds/uds.module#UdsPageModule' },
   //{ path: 'regional', loadChildren: './pages/regional/regional.module#RegionalPageModule' },
+    { path: 'regionali', loadChildren: './pages/regionali/regionali.module#RegionaliPageModule' },
   //{ path: 'centrozonal', loadChildren: './pages/centrozonal/centrozonal.module#CentrozonalPageModule' },
   //{ path: 'municipio', loadChildren: './pages/municipio/municipio.module#MunicipioPageModule' },
   //{ path: 'comuna', loadChildren: './pages/comuna/comuna.module#ComunaPageModule' },
@@ -41,6 +37,10 @@ const routes: Routes = [
   //{ path: 'rol', loadChildren: './pages/rol/rol.module#RolPageModule' },
   //{ path: 'acudientes', loadChildren: './pages/acudientes/acudientes.module#AcudientesPageModule' },
   //{ path: 'usuarios', loadChildren: './pages/usuarios/usuarios.module#UsuariosPageModule' },
+  { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
+  { path: 'regionali', loadChildren: './pages/regionali/regionali.module#RegionaliPageModule' },
+  { path: 'regionali', loadChildren: './pages/regionali/regionali.module#RegionaliPageModule' },
+
 ];
 
 @NgModule({
