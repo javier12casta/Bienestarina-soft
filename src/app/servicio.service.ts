@@ -77,7 +77,7 @@ putMunicipio(muni: Municipio) {
 }
 //---- Centro Zonal ------
 getCentro(){
-  const path = `${this.api}/CentroZonal`;
+  const path = `${this.api}/centrosZ`;
   return this.http.get<[Centrozonal]>(path);
 }
 
