@@ -67,6 +67,10 @@ const routes: Routes = [
         path: 'listas-datos-maestro', 
         loadChildren: '../listas-datos-maestro/listas-datos-maestro.module#ListasDatosMaestroPageModule'
       },
+      { 
+        path: 'puntoentrega', 
+        loadChildren: '../puntoentrega/puntoentrega.module#PuntoentregaPageModule' 
+      },
 
     ]
   }
