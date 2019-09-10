@@ -81,16 +81,16 @@ putMunicipio(muni: Municipio) {
 }
 //---- Centro Zonal ------
 getCentro(){
-  const path = `${this.api}/centrosZ`;
+  const path = `${this.api}/CentroZonal`;
   return this.http.get<[Centrozonal]>(path);
 }
 
 postCentro(cen: Centrozonal){
-  const path = `${this.api}/centrosZ`;
+  const path = `${this.api}/CZInsert`;
   return this.http.post<Centrozonal>(path, cen);
 }
 putCentro(cen: Centrozonal) {
-  const path = `${this.api}/centrosZ/${cen.idCentrosZonales}`;
+  const path = `${this.api}/CZUpdate/${cen.idCentrosZonales}`;
   return this.http.put<Centrozonal>(path, cen);
 }
 //---- Regional ----
