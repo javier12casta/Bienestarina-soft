@@ -1,5 +1,5 @@
 export interface Municipio {
-    idMunicipios?:number,
+    idMunicipios?:number, 
     Municipio: string,
-    CentrosZonales_idCentrosZonales: number,
+    idRegional: number,
 }
