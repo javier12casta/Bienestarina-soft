@@ -39,7 +39,6 @@ const routes: Routes = [
   //{ path: 'usuarios', loadChildren: './pages/usuarios/usuarios.module#UsuariosPageModule' },
   { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
   { path: 'regionali', loadChildren: './pages/regionali/regionali.module#RegionaliPageModule' },
-  { path: 'regionali', loadChildren: './pages/regionali/regionali.module#RegionaliPageModule' },
 
 ];
 

@@ -11,6 +11,7 @@ import { ServicioService } from './servicio.service';
 import { AuthService } from './providers/auth.service';
 import {AlertController} from '@ionic/angular';
 import { HttpModule } from '@angular/http';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
 
@@ -26,6 +27,7 @@ import { HttpModule } from '@angular/http';
     BrowserModule, 
     HttpClientModule,
     HttpModule,
+    FormsModule,
     IonicModule.forRoot(), 
     AppRoutingModule,
     

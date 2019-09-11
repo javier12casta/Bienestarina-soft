@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicioService } from '../../servicio.service';
-import { AlertController, ToastController, LoadingController } from '@ionic/angular';
+import { AlertController ,LoadingController, ToastController } from '@ionic/angular';
 import { Regional } from 'src/app/interfaces/regional';
 
 @Component({
