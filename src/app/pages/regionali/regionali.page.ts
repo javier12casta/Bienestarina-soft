@@ -12,7 +12,12 @@ export class RegionaliPage implements OnInit {
 
   //@HostBinding('class') classes = "row";
 
-  regionales: Regional[] = [];
+  regionales: Regional = {
+
+    Regional: ''
+
+  };
+
   constructor(
     private Service: ServicioService,
     private toastCtrl: ToastController,
@@ -23,15 +28,16 @@ export class RegionaliPage implements OnInit {
 
       //insertar Datos
       insertDatos(Regional: string) {
-        const Regional1 = {
-          //variables iguales a la interface
-          Regional,
-        };
-        this.Service.postRegional(Regional1).subscribe((newRegional) => {
-          this.regionales.push(newRegional);
+        console.log("push");
+
+       this.Service.postRegional(this.regionales).subscribe(res => {
           console.log(this.regionales);
-          //this.presentToast('Regional Creado');
-        });
+       },
+         err => 
+       {
+        console.log(err);
+       });
+
       }
 //mensajes
   async presentToast(message: string) {

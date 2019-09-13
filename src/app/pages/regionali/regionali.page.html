@@ -11,11 +11,12 @@
     <div class="card-body">
       <form>
         <div class="form-group">
-          <ion-input name="regional" [(ngModel)]="regionales.regional" type="text" placeholder="Nombre regional" class="form-control" autofocus>
+          <!-- name= "al campo de la tabla" [(ngModel)]="regionales."-->
+          <ion-input name="Regional" [(ngModel)]="regionales.Regional" type="text" placeholder="Nombre regional" class="form-control" autofocus>
           </ion-input>
         </div>
-      <ion-button (click)="insertDatos()">
-        Click me
+      <ion-button type="submit" (click)="insertDatos()" >
+        Guardar 
       </ion-button>
       </form>
     </div>
