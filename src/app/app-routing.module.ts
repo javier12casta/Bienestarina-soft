@@ -38,7 +38,7 @@ const routes: Routes = [
   //{ path: 'acudientes', loadChildren: './pages/acudientes/acudientes.module#AcudientesPageModule' },
   //{ path: 'usuarios', loadChildren: './pages/usuarios/usuarios.module#UsuariosPageModule' },
   { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
-  { path: 'regionali', loadChildren: './pages/regionali/regionali.module#RegionaliPageModule' },
+  { path: 'regionali/:id', loadChildren: './pages/regionali/regionali.module#RegionaliPageModule' },
 
 ];
 

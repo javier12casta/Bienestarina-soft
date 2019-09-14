@@ -1,19 +1,13 @@
 import { Injectable } from '@angular/core';
-import { resolve, reject } from 'q';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { User } from '../interfaces/user';
-import { Centrozonal } from '../interfaces/centrozonal';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  currentUser: User; 
-  centroz : Centrozonal;
-  API_URI ='http://localhost:3000/centrosZ';
+  currentUser: User;  
 
-
-  constructor(private http : HttpClient) { }
+  constructor() { }
 
   login (name: string, pw: string) : Promise<boolean>{
     return new Promise((resolve, reject) =>{

@@ -1,25 +1,29 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-menu-button type="buttons" slot="start"></ion-menu-button>
+    <ion-button slot="start" routerLink="/menu/regional">
+      <ion-icon name="arrow-round-back"></ion-icon>
+    </ion-button>
     <ion-title>Regionales</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <div class="col-md-4 offset-md-4">
-  <div class="card">
-    <div class="card-body">
-      <form>
-        <div class="form-group">
-          <!-- name= "al campo de la tabla" [(ngModel)]="regionales."-->
-          <ion-input name="Regional" [(ngModel)]="regionales.Regional" type="text" placeholder="Nombre regional" class="form-control" autofocus>
-          </ion-input>
-        </div>
-      <ion-button type="submit" (click)="insertDatos()" >
-        Guardar 
-      </ion-button>
-      </form>
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <!-- name= "al campo de la tabla" [(ngModel)]="regionales.(Nombre de la columna)"-->
+            <ion-input name="Regional" [(ngModel)]="regionales.Regional" type="text" placeholder="Nombre regional"
+              class="form-control" autofocus>
+            </ion-input>
+          </div>
+          <!-- Validacion para usar el mismo form  (click)="modificar ? updateDatos() : insertDatos()"-->
+          <ion-button type="submit" (click)="modificar ? updateDatos() : insertDatos()" routerLink="/menu/regional">
+            Guardar
+          </ion-button>
+        </form>
+      </div>
     </div>
   </div>
-</div>
 </ion-content>

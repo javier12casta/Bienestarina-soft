@@ -1,5 +1,5 @@
 export interface Barrio {
-    idBarriosVeredas?: number;
-    BarriosVeredas: string;
-    Comunas_idComunas: number;
+    idBarriosVeredas?: number,
+    BarriosVeredas: string,
+    Comunas_idComunas: number,
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ServicioService } from '../../servicio.service';
 import { AlertController ,LoadingController, ToastController } from '@ionic/angular';
 import { Regional } from 'src/app/interfaces/regional';
+import {Router} from '@angular/router'
+import { RegionaliPage } from '../regionali/regionali.page';
 
 @Component({
   selector: 'app-regional',
@@ -15,7 +17,8 @@ export class RegionalPage implements OnInit {
     private Service: ServicioService,
     private alertCtrl: AlertController,
     private toastCtrl: ToastController,
-    private loadingCtrl: LoadingController
+    private loadingCtrl: LoadingController,
+    private router: Router
   ) { }
 
   //consultar Datos
@@ -33,46 +36,6 @@ export class RegionalPage implements OnInit {
       }
       );
   }
-    //insertar Datos
-    insertDatos(Regional: string) {
-      const Regional1 = {
-        //variables iguales a la interface
-        Regional,
-      };
-      this.Service.postRegional(Regional1).subscribe((newRegional) => {
-        this.usuarios.push(newRegional);
-        this.presentToast('Regional Creado');
-      });
-    }
-    // ventana para crear rol
-    async openAlert() {
-      const alert = await this.alertCtrl.create({
-        header: 'Crear un nuevo Regional',
-        inputs: [
-          {
-            name: 'Regional',
-            type: 'text',
-            placeholder: 'Nombre Regional',
-          }
-        ],
-        buttons: [
-          {
-            text: 'Cancelar',
-            role: 'cancel',
-            cssClass: 'secondary',
-          },
-          {
-            text: 'Crear',
-            handler: (data) => {
-              this.insertDatos(data.Regional);
-              console.log(data);
-            },
-          }
-        ]
-      });
-      await alert.present();
-    }
-
       //mensajes
   async presentToast(message: string) {
     const toast = await this.toastCtrl.create({

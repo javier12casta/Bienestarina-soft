@@ -6,6 +6,7 @@ import { Comuna } from './interfaces/comuna';
 import { Municipio } from './interfaces/municipio';
 import { Centrozonal } from './interfaces/centrozonal';
 import { Regional } from './interfaces/regional';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +24,8 @@ export class ServicioService {
     return this.http.get<Rol[]>(path);
   }
 // metodo get de rol
-  getRol(id: Rol) {
-    return this.http.get(`${this.api}/rol/${id.idRolPersona}`);
+  getRol(rol: Rol) {
+    return this.http.get(`${this.api}/rol/${rol.idRolPersona}`);
   }
 //metodo post de rolPersona
   insertarRol(rol: Rol) {
@@ -92,18 +93,24 @@ putCentro(cen: Centrozonal) {
   const path = `${this.api}/centroZ/${cen.idCentrosZonales}`;
   return this.http.put<Centrozonal>(path, cen);
 }
-//---- Regional ----
+//---- Regional Metodos funcionando--------------------------------------------------------------
 getRegional(){
   const path = `${this.api}/regional`;
   return this.http.get<[Regional]>(path);
 }
-
+//---Metodo traer por id
+getRegionalid(id: string) {
+  //const path = `${this.api}/regional/${id}`;
+  return this.http.get(`${this.api}/regional/${id}`);
+}
+//----Metodo Crear Regionales
 postRegional(regi: Regional){
   const path = `${this.api}/regional`;
   return this.http.post<Regional>(path, regi);
 }
-putRegional(regi: Regional) {
-  const path = `${this.api}/regional/${regi.idRegional}`;
-  return this.http.put<Regional>(path, regi);
+//Metodo Actualizar Regionales
+putRegional(id: string|number, regi: Regional ){
+  return this.http.put<Regional>(`${this.api}/regional/${id}`, regi);
 }
+
 }
