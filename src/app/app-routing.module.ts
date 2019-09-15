@@ -39,7 +39,8 @@ const routes: Routes = [
   //{ path: 'usuarios', loadChildren: './pages/usuarios/usuarios.module#UsuariosPageModule' },
   { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
   { path: 'regionali/:id', loadChildren: './pages/regionali/regionali.module#RegionaliPageModule' },
-
+  { path: 'municipioi/:id', loadChildren: './pages/municipioi/municipioi.module#MunicipioiPageModule' },
+  { path: 'municipioi', loadChildren: './pages/municipioi/municipioi.module#MunicipioiPageModule' },
 ];
 
 @NgModule({

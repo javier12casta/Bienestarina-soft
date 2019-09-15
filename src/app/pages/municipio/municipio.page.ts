@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServicioService } from '../../servicio.service';
 import { AlertController, ToastController, LoadingController } from '@ionic/angular';
 import { Municipio } from 'src/app/interfaces/municipio';
+import { Regional } from 'src/app/interfaces/regional';
 
 @Component({
   selector: 'app-municipio',
@@ -10,11 +11,8 @@ import { Municipio } from 'src/app/interfaces/municipio';
 })
 export class MunicipioPage implements OnInit {
   
-  municipio: Municipio = {
-    Municipio: "DE",
-    idRegional: 1,
-  }
-
+  municipio: Municipio [] = [];
+  regionales: Regional [] = [];
 
   constructor(
     private Service: ServicioService,
@@ -25,7 +23,22 @@ export class MunicipioPage implements OnInit {
 
  
   async ngOnInit() {
+    
+    this.Service.getMunicipio()
+      .subscribe(async (data) => {
+        this.municipio = data;
+        console.log(data);
+        console.log('funciona');
+      }
+      );
+  }
 
+  getRegional(){
+    this.Service.getRegional().subscribe(res =>{
+      this.regionales = res;
+    },err=>{
+      console.log(err)
+    });
   }
     
       //mensajes
@@ -37,19 +50,4 @@ export class MunicipioPage implements OnInit {
     await toast.present();
   }
  
-
-  public RegistrarMunicipio(){
-
-this.Service.postMunicipio(this.municipio).subscribe(
-
-  res => console.log(res),
-  err => console.log(err)
-
-);
-
-this.presentToast('municipio Creado');
-  }
-
-
-
 }
