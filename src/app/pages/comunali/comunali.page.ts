@@ -15,7 +15,7 @@ export class ComunaliPage implements OnInit {
   comunas: Comuna = {
     idComunas : 0,
     Comunas:'',
-    Municipios_idMunicipios: 0,
+    idMunicipios: 0,
 
   };
 
@@ -43,9 +43,8 @@ export class ComunaliPage implements OnInit {
   }
 
   //insertar Datos
-  insertDatos(Regional: string) {
+  insertDatos(Comuna: string) {
     delete this.comunas.idComunas;
-
     this.Service.postComuna(this.comunas).subscribe(res => {
       console.log(this.comunas);
     },

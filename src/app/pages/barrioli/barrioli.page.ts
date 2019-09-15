@@ -15,11 +15,11 @@ export class BarrioliPage implements OnInit {
   barrio: Barrio = {
     idBarriosVeredas: 0,
     BarriosVeredas: '',
-    Comunas_idComunas: 0,
+    idComunas: 0,
 
   };
 
-  modificar: boolean = false;
+  modificar = false;
   constructor(private Service: ServicioService,
     private toastCtrl: ToastController,
     private activeRoute: ActivatedRoute,) { }
@@ -42,7 +42,7 @@ export class BarrioliPage implements OnInit {
   }
 
   //insertar Datos
-  insertDatos(barrio: string) {
+  insertDatos(Barrio: string) {
     delete this.barrio.idBarriosVeredas;
 
     this.Service.postBarrio(this.barrio).subscribe(res => {
@@ -51,7 +51,6 @@ export class BarrioliPage implements OnInit {
       err => {
         console.log(err);
       });
-
   }
   // Actualizar Datos
   updateDatos(){

@@ -66,7 +66,6 @@ getComuna(){
 
 //---Metodo traer por id
 getComunaid(id: string) {
-  //const path = `${this.api}/regional/${id}`;
   return this.http.get(`${this.api}/comuna/${id}`);
 }
 

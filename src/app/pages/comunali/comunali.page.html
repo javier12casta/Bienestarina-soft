@@ -14,9 +14,10 @@
           <form>
             <div class="form-group">
               <!-- name= "al campo de la tabla" [(ngModel)]="regionales.(Nombre de la columna)"-->
-              <ion-input name="Comunas" [(ngModel)]="comunas.Comuna" type="text" placeholder="Nombre comuna"
+              <ion-input name="Comunas" [(ngModel)]="comunas.Comunas" type="text" placeholder="Nombre comuna"
                 class="form-control" autofocus>
               </ion-input>
+              <ion-input name="idMunicipios" [(ngModel)]="comunas.idMunicipios" type="number" placeholder="Municipio"></ion-input>
             </div>
             <!-- Validacion para usar el mismo form  (click)="modificar ? updateDatos() : insertDatos()"-->
             <ion-button type="submit" (click)="modificar ? updateDatos() : insertDatos()" routerLink="/menu/comuna">

@@ -31,51 +31,6 @@ export class BarrioPage implements OnInit {
       }
       );
   }
-    //insertar Datos
-    insertDatos(BarriosVeredas: string, Comunas_idComunas: number) {
-      const Barrio1 = {
-        //variables iguales a la interface
-        BarriosVeredas,
-        Comunas_idComunas,
-      };
-      this.Service.postBarrio(Barrio1).subscribe((newBarrio) => {
-        this.usuarios.push(newBarrio);
-        this.presentToast('Barrio o vereda Creado');
-      });
-    }
-    // ventana para crear rol
-    async openAlert() {
-      const alert = await this.alertCtrl.create({
-        header: 'Crear un nuevo Barrio',
-        inputs: [
-          {
-            name: 'BarriosVeredas',
-            type: 'text',
-            placeholder: 'Nombre Barrio o vereda',
-          },
-          {
-            name: 'Comunas_idComunas',
-            type: 'number',
-            placeholder: `Comuna`,
-          },
-        ],
-        buttons: [
-          {
-            text: 'Cancelar',
-            role: 'cancel',
-            cssClass: 'secondary',
-          },
-          {
-            text: 'Crear',
-            handler: (data) => {
-              this.insertDatos(data.BarriosVeredas, data.Comunas_idComunas);
-              console.log(data);
-            },
-          }
-        ]
-      });
-      await alert.present();
-    }
 
       //mensajes
   async presentToast(message: string) {
