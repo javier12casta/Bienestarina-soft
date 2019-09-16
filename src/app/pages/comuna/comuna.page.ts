@@ -16,6 +16,8 @@ export class ComunaPage implements OnInit {
     Municipios_idMunicipios: 5,
   }
 
+  usuarios: Comuna[] = [];
+
   constructor(
     private Service: ServicioService,
     private alertCtrl: AlertController,
@@ -23,13 +25,21 @@ export class ComunaPage implements OnInit {
     private loadingCtrl: LoadingController
   ) { }
 
-  //consultar Datos
-  async ngOnInit() {
-    
+   //consultar Datos
+   async ngOnInit() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Cargando..',
+    });
+    await loading.present();
+    this.Service.getComuna()
+      .subscribe(async (data) => {
+        this.usuarios = data;
+        console.log(data);
+        console.log('funciona');
+        await loading.dismiss();
+      }
+      );
   }
-   
-    
-
       //mensajes
   async presentToast(message: string) {
     const toast = await this.toastCtrl.create({
@@ -37,6 +47,15 @@ export class ComunaPage implements OnInit {
       duration: 3000
     });
     await toast.present();
+  }
+  //animacion carga
+  async presentLoading() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Cargando..',
+      duration: 2000
+    });
+    await loading.present();
+    return loading;
   }
 
   public RegistrarComuna(){

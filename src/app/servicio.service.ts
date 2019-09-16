@@ -43,13 +43,20 @@ getBarrio(){
   return this.http.get<Barrio[]>(path);
 }
 
+//---Metodo traer por id
+getBarrioid(id: string) {
+  //const path = `${this.api}/regional/${id}`;
+  return this.http.get(`${this.api}/barrio/${id}`);
+}
+
+
 postBarrio(bv: Barrio){
   const path = `${this.api}/barrio`;
   return this.http.post<Barrio>(path, bv);
 }
-putBarrio(bv: Barrio) {
-  const path = `${this.api}/barrio/${bv.idBarriosVeredas}`;
-  return this.http.put<Barrio>(path, bv);
+//Metodo Actualizar Regionales
+putBarrio(id: string|number, barr: Barrio ){
+  return this.http.put<Barrio>(`${this.api}/barrio/${id}`, barr);
 }
 //-----comunas------
 getComuna(){
@@ -57,13 +64,19 @@ getComuna(){
   return this.http.get<[Comuna]>(path);
 }
 
+//---Metodo traer por id
+getComunaid(id: string) {
+  //const path = `${this.api}/regional/${id}`;
+  return this.http.get(`${this.api}/comuna/${id}`);
+}
+
 postComuna(comu: Comuna){
   const path = `${this.api}/comuna`;
   return this.http.post<Comuna>(path, comu);
 }
-putComuna(comu: Comuna) {
+putComuna(id: string|number, comu: Comuna ) {
   const path = `${this.api}/comuna/${comu.idComunas}`;
-  return this.http.put<Comuna>(path, comu);
+  return this.http.put<Comuna>(`${this.api}/comuna/${id}`, comu);
 }
 //------Municipio---------
 getMunicipio(){

@@ -2,7 +2,7 @@
   <ion-toolbar color="primary">
     <ion-menu-button type="buttons" slot="start"></ion-menu-button>
     <ion-title>Comunas</ion-title>
-    <ion-button slot="end">
+    <ion-button routerLink="/comunali" slot="end">
       <ion-icon name="add"></ion-icon>
     </ion-button>
 
@@ -12,14 +12,15 @@
 <ion-content class="ion-padding">
   <ion-list>
 
-    <ion-label>Nombre</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-label>Municipio</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-item *ngFor="let RG of usuarios">
+      {{RG.idComunas}} {{RG.Comunas}}
 
-    <ion-button size="default" color="success" expand="block" type="submit" (click)="RegistrarComuna()">registrar</ion-button>
+      <ion-button [routerLink]="['/comunali', RG.idComunas]" slot="end">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
 
+    </ion-item>
 
-
+    
   </ion-list>
 </ion-content>

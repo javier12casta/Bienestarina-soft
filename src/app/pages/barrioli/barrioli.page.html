@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>barrio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div class="col-md-4 offset-md-4">
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <!-- name= "al campo de la tabla" [(ngModel)]="regionales.(Nombre de la columna)"-->
+              <ion-input name="Comunas" [(ngModel)]="comunas.Comuna" type="text" placeholder="Nombre barrio"
+                class="form-control" autofocus>
+              </ion-input>
+            </div>
+            <!-- Validacion para usar el mismo form  (click)="modificar ? updateDatos() : insertDatos()"-->
+            <ion-button type="submit" (click)="modificar ? updateDatos() : insertDatos()" routerLink="/menu/barrio">
+              Guardar
+            </ion-button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </ion-content>

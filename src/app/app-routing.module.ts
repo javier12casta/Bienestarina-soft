@@ -38,7 +38,9 @@ const routes: Routes = [
   //{ path: 'acudientes', loadChildren: './pages/acudientes/acudientes.module#AcudientesPageModule' },
   //{ path: 'usuarios', loadChildren: './pages/usuarios/usuarios.module#UsuariosPageModule' },
   { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
-  { path: 'regionali/:id', loadChildren: './pages/regionali/regionali.module#RegionaliPageModule' },
+  { path: 'regionali/:id', loadChildren: './pages/regionali/regionali.module#RegionaliPageModule' },  { path: 'comunali', loadChildren: './pages/comunali/comunali.module#ComunaliPageModule' },
+  { path: 'barrioli', loadChildren: './pages/barrioli/barrioli.module#BarrioliPageModule' },
+
 
 ];
 
