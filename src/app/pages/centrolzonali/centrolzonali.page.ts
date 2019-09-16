@@ -12,11 +12,11 @@ export class CentrolzonaliPage implements OnInit {
   centros : Centrozonal = {
     idCentrosZonales : 0,
       NombreCentroZonal: '',
-      idMunicipios: 5,
+      idMunicipios: 1,
       idComunas: 2,
-      idBarrioVeredas: 1,
+      idBarrioVeredas: 2,
       CodigoExternoJcz: '',
-      CodigoExternoCZ: 56,
+      CodigoExternoCZ: 5634,
       Estado: 1,
       idRegional: 2,
   };
