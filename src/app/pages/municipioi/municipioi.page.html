@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button slot="start" routerLink="/menu/municipio">
+      <ion-icon name="arrow-round-back"></ion-icon>
+    </ion-button>
+    <ion-title>Municipios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="col-md-4 offset-md-4">
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <!-- name= "al campo de la tabla" [(ngModel)]="regionales.(Nombre de la columna)"-->
+            <ion-input name="Municipio" [(ngModel)]="municipios.Municipio" type="text" placeholder="Nombre Municipio"
+              class="form-control" autofocus>
+            </ion-input>
+            <ion-input name="idRegional" [(ngModel)]="municipios.idRegional" type="text" placeholder="Regional"></ion-input>
+            <!--
+            <ion-item>
+              <ion-label>Regional</ion-label>
+              <ion-select placeholder="Seleccione regional">
+                <ion-select-option value="" *ngFor="let reg of regionales" name="Municipio"
+                  [(ngModel)]="municipios.Municipio">{{reg.Regional}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+            -->
+          </div>
+          <!-- Validacion para usar el mismo form  (click)="modificar ? updateDatos() : insertDatos()"-->
+          <ion-button type="submit" (click)="modificar ? updateDatos() : insertDatos()" routerLink="/menu/municipio">
+            Guardar
+          </ion-button>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>

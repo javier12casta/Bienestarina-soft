@@ -2,22 +2,20 @@
   <ion-toolbar color="primary">
     <ion-menu-button type="buttons" slot="start"></ion-menu-button>
     <ion-title>Municipios</ion-title>
-    <ion-button (click)="openAlert()" slot="end">
+    <ion-button routerLink="/municipioi" slot="end">
       <ion-icon name="add"></ion-icon>
     </ion-button>
-
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <ion-list>
-  
-    <ion-label>Nombre Municipio</ion-label>
-    <ion-input type="text"></ion-input>
-    <ion-label>Region</ion-label>
-    <ion-input type="text"></ion-input>
-
-    <ion-button size="default" color="success" expand="block" type="submit" (click)="RegistrarMunicipio()">registrar</ion-button>
-
+    <ion-label>Municipios</ion-label>
+    <ion-item *ngFor="let muni of municipio">
+      {{muni.Municipio}} {{muni.idRegional}}
+      <ion-button [routerLink]="['/municipioi', muni.idMunicipios]" slot="end">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+    </ion-item>
   </ion-list>
 </ion-content>

@@ -83,13 +83,16 @@ getMunicipio(){
   const path = `${this.api}/municipio`;
   return this.http.get<[Municipio]>(path);
 }
-
+//---Metodo traer por id
+getMunicipioid(id: string) {
+  return this.http.get(`${this.api}/municipio/${id}`);
+}
 postMunicipio(muni: Municipio){
   const path = `${this.api}/municipio`;
   return this.http.post<Municipio>(path, muni);
 }
-putMunicipio(muni: Municipio) {
-  const path = `${this.api}/municipio/${muni.idMunicipios}`;
+putMunicipio(id: string|number, muni: Municipio) {
+  const path = `${this.api}/municipio/${id}`;
   return this.http.put<Municipio>(path, muni);
 }
 //---- Centro Zonal ------
@@ -113,7 +116,6 @@ getRegional(){
 }
 //---Metodo traer por id
 getRegionalid(id: string) {
-  //const path = `${this.api}/regional/${id}`;
   return this.http.get(`${this.api}/regional/${id}`);
 }
 //----Metodo Crear Regionales
