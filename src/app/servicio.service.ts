@@ -96,16 +96,18 @@ putMunicipio(id: string|number, muni: Municipio) {
 }
 //---- Centro Zonal ------
 getCentro(){
-  const path = `${this.api}/centroZ`;
+  const path = `${this.api}/centrosZ`;
   return this.http.get<[Centrozonal]>(path);
 }
-
+getCentroid(id: string) {
+  return this.http.get(`${this.api}/centrosZ/${id}`);
+}
 postCentro(cen: Centrozonal){
-  const path = `${this.api}/centroZ`;
+  const path = `${this.api}/centrosZ`;
   return this.http.post<Centrozonal>(path, cen);
 }
-putCentro(cen: Centrozonal) {
-  const path = `${this.api}/centroZ/${cen.idCentrosZonales}`;
+putCentro(id: string|number, cen: Centrozonal) {
+  const path = `${this.api}/centrosZ/${id}`;
   return this.http.put<Centrozonal>(path, cen);
 }
 //---- Regional Metodos funcionando--------------------------------------------------------------

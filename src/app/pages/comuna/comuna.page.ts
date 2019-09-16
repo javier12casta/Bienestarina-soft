@@ -13,7 +13,7 @@ export class ComunaPage implements OnInit {
   comuna: Comuna = {
 
     Comunas:"comuna 2",
-    Municipios_idMunicipios: 5,
+    idMunicipios: 5,
   }
 
   usuarios: Comuna[] = [];

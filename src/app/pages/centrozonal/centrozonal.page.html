@@ -2,80 +2,24 @@
   <ion-toolbar color="primary">
     <ion-menu-button type="buttons" slot="start"></ion-menu-button>
     <ion-title>Centros Zonales</ion-title>
-    <ion-button  slot="end">
-      Inhabilitar
-     </ion-button>
-
-    <ion-button  slot="end">
-     Modificar Datos Primer Nivel
+    <ion-button routerLink="/centrolzonali" slot="end">
+      <ion-icon name="add"></ion-icon>
     </ion-button>
-
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+  <ion-list>
 
-  <ion-label class="my-label">Centro Zonal</ion-label>
-  <li></li>
-  <ion-label>Estado del maestro</ion-label>
-  <ion-input type="number" inputmode="numeric" placeholder=" ingresar dato" clearInput="true" ></ion-input>
+    <ion-item *ngFor="let cen of centros">
+      {{cen.CentrosZonales}} {{cen.NombreCentroZonal}} {{cen.idMunicipios}} {{cen.idComunas}} {{cen.idBarrioVeredas}}
+      {{cen.CodigoExternoJcz}} {{cen.CodigoExternoCZ}} {{cen.Estado}} {{cen.idRegional}}
+      <ion-button [routerLink]="['/centrolzonali', cen.idCentrosZonales]" slot="end">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
 
-  <ion-label>Nombre Centro Zonal</ion-label>
-  <ion-input type="text"></ion-input>
-
-  <ion-item>
-    <ion-label>Regional</ion-label>
-    <ion-select placeholder="Selecciona una">
-      <ion-select-option value="1">amazonas</ion-select-option>
-      <ion-select-option value="2">Antioquia</ion-select-option>
-      <ion-select-option value="3">Arauca</ion-select-option>
-      <ion-select-option value="3">Atlantico</ion-select-option>
-      <ion-select-option value="3">Bogota</ion-select-option>
-      <ion-select-option value="3">Bolivar</ion-select-option>
-      <ion-select-option value="3">Boyaca</ion-select-option>
-      <ion-select-option value="3">Caldas</ion-select-option>
-      <ion-select-option value="3">Caqueta</ion-select-option>
-      <ion-select-option value="3">Casanare</ion-select-option>
-      <ion-select-option value="3">Cauca</ion-select-option>
-      <ion-select-option value="3">Cesar</ion-select-option>
-      <ion-select-option value="3">Choco</ion-select-option>
-      <ion-select-option value="3">Cundinamarca</ion-select-option>
-      <ion-select-option value="3">Cordoba</ion-select-option>
-      <ion-select-option value="3">Guania</ion-select-option>
-      <ion-select-option value="3">Guaviare</ion-select-option>
-      <ion-select-option value="3">Huila</ion-select-option>
-      <ion-select-option value="3">Guajira</ion-select-option>
-      <ion-select-option value="3">Magdalena</ion-select-option>
-      <ion-select-option value="3">Meta</ion-select-option>
-      <ion-select-option value="3">Nariño</ion-select-option>
-      <ion-select-option value="3">Norte de santander</ion-select-option>
-      <ion-select-option value="3">putumayo</ion-select-option>
-      <ion-select-option value="3">Quindio</ion-select-option>
-      <ion-select-option value="3">Risaralda</ion-select-option>
-      <ion-select-option value="3">San Andres</ion-select-option>
-      <ion-select-option value="3">Santander</ion-select-option>
-      <ion-select-option value="3">Sucre</ion-select-option>
-      <ion-select-option value="3">Tolima</ion-select-option>
-      <ion-select-option value="3">Valle</ion-select-option>
-      <ion-select-option value="3">Vaupes</ion-select-option>
-      <ion-select-option value="3">Vichada</ion-select-option>
+    </ion-item>
 
 
-    </ion-select>
-  </ion-item>
-
-  <ion-label>Municipio</ion-label>
-  <ion-input type="text"></ion-input>
-
-  <ion-label>localidad comuna o vereda</ion-label>
-  <ion-input type="text"></ion-input>
-
-  <ion-label>CodigoJerarquiaCZ</ion-label>
-  <ion-input type="text"></ion-input>
-
-  <ion-label>CodigoCZ</ion-label>
-  <ion-input type="number"></ion-input>
-
-  <ion-button size="default" color="success" expand="block" type="submit" (click)="insertCentroZonal()">crear</ion-button>
-
+  </ion-list>
 </ion-content>
