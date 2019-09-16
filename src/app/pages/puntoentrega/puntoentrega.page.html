@@ -1,56 +1,21 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button type="buttons"></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Entrega</ion-title>
-    <ion-button (click)="openAlert()" slot="end">
-      Inhabilitar
-     </ion-button>
-
-    <ion-button (click)="openAlert()" slot="end">
-     Modificar
+    <ion-menu-button type="buttons" slot="start"></ion-menu-button>
+    <ion-title>Puntos de Entrega</ion-title>
+    <ion-button routerLink="/puntoentregai" slot="end">
+      <ion-icon name="add"></ion-icon>
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding-top" >
-  <div class="panel">
-    
-      <ion-item>
-          <ion-label>Estado del dato maestro</ion-label>
-          <ion-select placeholder="Selecciona una opcion">
-            <ion-select-option value="1">1</ion-select-option>
-            <ion-select-option value="2">2</ion-select-option>
-          </ion-select>
-        </ion-item>
-
-          <ion-label>Nombre PE</ion-label>
-          <ion-input type="text"></ion-input>
-
-          <ion-label>Codigo externo PE</ion-label>
-          <ion-input type="number"></ion-input>
-
-          <ion-label>Codigo Interno PE</ion-label>
-          <ion-input type="text"></ion-input>
-
-          <ion-label>responsable PE</ion-label>
-          <ion-input type="text"></ion-input>
-
-          <ion-label>Localidad comunas o vereda</ion-label>
-          <ion-input type="text"></ion-input>
-
-          <ion-label>Direccion PE</ion-label>
-          <ion-input type="text"></ion-input>
-
-          <ion-label>Barrio PE</ion-label>
-          <ion-input type="text"></ion-input>
-
-          <ion-label>Telefono PE</ion-label>
-          <ion-input type="number"></ion-input>
-
-          <ion-button size="default" color="success" expand="block" type="submit" (click)="finish()">Enviar</ion-button>
-
-    </div>
-
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let pun of puntos">
+      {{pun.NombrePE}} {{pun.CodigoInternoPE}} {{pun.Direccion}} {{pun.Responsable}} {{pun.Suplente}}
+      {{pun.Estado}} {{pun.Telefono}} {{pun.CodigoExternoPE}} {{pun.idBarriosVeredas}} {{pun.idCentrosZonales}}
+      <ion-button [routerLink]="['/puntoentregai', pun.idPuntoEntrega]" slot="end">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>

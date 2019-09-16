@@ -10,16 +10,12 @@
 
 <ion-content class="ion-padding">
   <ion-list>
-
     <ion-item *ngFor="let cen of centros">
       {{cen.CentrosZonales}} {{cen.NombreCentroZonal}} {{cen.idMunicipios}} {{cen.idComunas}} {{cen.idBarrioVeredas}}
       {{cen.CodigoExternoJcz}} {{cen.CodigoExternoCZ}} {{cen.Estado}} {{cen.idRegional}}
       <ion-button [routerLink]="['/centrolzonali', cen.idCentrosZonales]" slot="end">
         <ion-icon name="create"></ion-icon>
       </ion-button>
-
     </ion-item>
-
-
   </ion-list>
 </ion-content>

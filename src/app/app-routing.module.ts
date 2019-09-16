@@ -47,6 +47,8 @@ const routes: Routes = [
   { path: 'barrioli/:id', loadChildren: './pages/barrioli/barrioli.module#BarrioliPageModule' },
   { path: 'centrolzonali', loadChildren: './pages/centrolzonali/centrolzonali.module#CentrolzonaliPageModule' },
   { path: 'centrolzonali/:id', loadChildren: './pages/centrolzonali/centrolzonali.module#CentrolzonaliPageModule' },
+  { path: 'puntoentregai', loadChildren: './pages/puntoentregai/puntoentregai.module#PuntoentregaiPageModule' },
+  { path: 'puntoentregai/:id', loadChildren: './pages/puntoentregai/puntoentregai.module#PuntoentregaiPageModule' },
 ];
 
 @NgModule({

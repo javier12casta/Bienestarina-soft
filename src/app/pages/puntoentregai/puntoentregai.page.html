@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" routerLink="/menu/puntoentrega">
+      <ion-icon name="arrow-round-back"></ion-icon>
+    </ion-button>
+    <ion-title>Puntos de Entrega</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div class="col-md-4 offset-md-4">
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <!-- name= "al campo de la tabla" [(ngModel)]="regionales.(Nombre de la columna)"-->
+            <ion-input name="NombrePE" [(ngModel)]="puntos.NombrePE" type="text" placeholder="Nombre punto Entrega"
+              class="form-control" autofocus>
+            </ion-input>
+            <ion-input name="CodigoInternoPE" [(ngModel)]="puntos.CodigoInternoPE" type="text"
+              placeholder="CodigoInternoPE">
+            </ion-input>
+            <ion-input name="Direccion" [(ngModel)]="puntos.Direccion" type="text" placeholder="Direccion">
+            </ion-input>
+            <ion-input name="Responsable" [(ngModel)]="puntos.Responsable" type="text" placeholder="Responsable">
+            </ion-input>
+            <ion-input name="Suplente" [(ngModel)]="puntos.Suplente" type="text" placeholder="Suplente">
+            </ion-input>
+            <ion-input name="Estado" [(ngModel)]="puntos.Estado" type="number" placeholder="Estado">
+            </ion-input>
+            <ion-input name="Telefono" [(ngModel)]="puntos.Telefono" type="Telefono" placeholder="Telefono">
+            </ion-input>
+            <ion-input name="CodigoExternoPE" [(ngModel)]="puntos.CodigoExternoPE" type="text"
+              placeholder="CodigoExternoPE">
+            </ion-input>
+            <ion-input name="idBarriosVeredas" [(ngModel)]="puntos.idBarriosVeredas" type="number"
+              placeholder="idBarriosVeredas">
+            </ion-input>
+            <ion-input name="idCentrosZonales" [(ngModel)]="puntos.idCentrosZonales" type="number"
+              placeholder="idCentrosZonales">
+            </ion-input>
+          </div>
+          <!-- Validacion para usar el mismo form  (click)="modificar ? updateDatos() : insertDatos()"-->
+          <ion-button type="submit" (click)="modificar ? updateDatos() : insertDatos()" routerLink="/menu/puntoentrega">
+            Guardar
+          </ion-button>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>

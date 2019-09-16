@@ -7,6 +7,7 @@ import { Municipio } from './interfaces/municipio';
 import { Centrozonal } from './interfaces/centrozonal';
 import { Regional } from './interfaces/regional';
 import { Observable } from 'rxjs';
+import {Puntoentrega} from 'src/app/interfaces/puntoentrega';
 
 @Injectable({
   providedIn: 'root'
@@ -128,5 +129,22 @@ postRegional(regi: Regional){
 putRegional(id: string|number, regi: Regional ){
   return this.http.put<Regional>(`${this.api}/regional/${id}`, regi);
 }
-
+//--------------------------------
+getPunto(){
+  const path = `${this.api}/punto`;
+  return this.http.get<[Puntoentrega]>(path);
+}
+//---Metodo traer por id
+getPuntoid(id: string) {
+  return this.http.get(`${this.api}/punto/${id}`);
+}
+//----Metodo Crear Regionales
+postPunto(punto: Puntoentrega){
+  const path = `${this.api}/punto`;
+  return this.http.post<Puntoentrega>(path, punto);
+}
+//Metodo Actualizar Regionales
+putPunto(id: string|number, punto: Puntoentrega ){
+  return this.http.put<Puntoentrega>(`${this.api}/punto/${id}`, punto);
+}
 }
